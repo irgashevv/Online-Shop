@@ -4,7 +4,7 @@
 
 <div class="width1024">
     <h1>Create Order</h1>
-    <form action="http://localhost/shop/frontend/index.php?model=order&action=create" method="post">
+    <form action="/index.php?model=order&action=create" method="post">
         <div>
             <label>
                 Name:

@@ -34,8 +34,8 @@
                             <td><?=$c['groupId']?></td>
                             <td><?=$c['parentId']?></td>
                             <td>
-                                <a href="http://localhost/shop/backend/index.php?model=category&action=update&id=<?=$c['id']?>" class="btn btn-warning">Редактировать</a> 
-                                <a href="http://localhost/shop/backend/index.php?model=category&action=delete&id=<?=$c['id']?>" class="btn btn-danger">Удалить</a>
+                                <a href="/index.php?model=category&action=update&id=<?=$c['id']?>" class="btn btn-warning">Редактировать</a>
+                                <a href="/index.php?model=category&action=delete&id=<?=$c['id']?>" class="btn btn-danger">Удалить</a>
                             </td>
                         </tr>
 <?php endforeach; ?>

@@ -11,7 +11,7 @@
 			<div id="product">
 				<div class="columns">
 					<div class="column">
-						<img style="width: 256px; height: 397px;" src="/shop/uploads/products/<?=$product['picture']?>" alt="">
+						<img style="width: 256px; height: 397px;" src="http://localhost/shop/uploads/products/<?=$product['picture']?>" alt="">
 					</div>
 					<div class="column">
 						<h1><?=$product['title']?></h1>
@@ -22,7 +22,7 @@
 							<div>
 								<div class="label"> Our Price: <span> $<?=$product['price']?></span></div>
 								<div class="statistic"> Was 200$; save 20% </div>
-								<form action="http://localhost/shop/frontend/index.php?model=basket&action=addProduct" method="post">
+								<form action="/index.php?model=basket&action=addProduct" method="post">
 									<input type="hidden" name="quantity" value="1">
 									<input type="hidden" name="product_id" value="<?=$product['id']?>">
 									<button>Add To Cart</button>

@@ -7,8 +7,8 @@
   <aside class="control-sidebar control-sidebar-dark">
   </aside>
 </div>
-<script src="http://localhost/shop/backend/plugins/jquery/jquery.min.js"></script>
-<script src="http://localhost/shop/backend/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="http://localhost/shop/backend/dist/js/adminlte.min.js"></script>
+<script src="../plugins/jquery/jquery.min.js"></script>
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/js/adminlte.min.js"></script>
 </body>
 </html>

@@ -12,11 +12,11 @@
 		?>
 				<li>
 					<img src="/frontend/imgs/sale30.png" alt="">
-                    <a href="http://localhost/shop/frontend/index.php?model=product&action=view&id=<?=$all[$i]['id']?>">
+                    <a href="/index.php?model=product&action=view&id=<?=$all[$i]['id']?>">
                         <img src="http://localhost/shop/uploads/products/<?=$all[$i]['picture']?>" alt="">
                     </a>
 					<h4>
-                        <a href="http://localhost/shop/frontend/index.php?model=product&action=view&id=<?=$all[$i]['id']?>">
+                        <a href="/index.php?model=product&action=view&id=<?=$all[$i]['id']?>">
                             <?=$all[$i]['title']?>
                         </a>
                     </h4>

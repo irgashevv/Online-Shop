@@ -70,12 +70,12 @@
 	if ($i % 5 === 0) print "</ul><ul>" ;
 		?>
 				<li>
-					<img src="/shop/frontend/imgs/sale30.png" alt="">
-					<a href="http://localhost/shop/frontend/index.php?model=product&action=view&id=<?=$all[$i]['id']?>">
+					<img src="../../imgs/sale30.png" alt="">
+					<a href="/index.php?model=product&action=view&id=<?=$all[$i]['id']?>">
                         <img src="http://localhost/shop/uploads/products/<?=$all[$i]['picture']?>" alt="">
                     </a>
 					<h4>
-                        <a href="http://localhost/shop/frontend/index.php?model=product&action=view&id=<?=$all[$i]['id']?>"><?=$all[$i]['title']?>
+                        <a href="/index.php?model=product&action=view&id=<?=$all[$i]['id']?>"><?=$all[$i]['title']?>
                         </a>
                     </h4>
 						<div class="price">$<?=$all[$i]['price']?></div>

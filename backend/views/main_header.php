@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PHP MVC</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <link rel="stylesheet" href="http://localhost/shop/backend/plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="http://localhost/shop/backend/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
     <style>
         img {
             width: 100px;
@@ -24,7 +24,7 @@
     <?php if (SecurityService::isAuthorized()) : ?>
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <a href="/index.php" class="brand-link">
-            <img src="../backend/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">PHP MVC</span>
         </a>
 
@@ -33,7 +33,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                 <li class="nav-item">
-                    <a href="http://localhost/shop/backend/index.php?model=product&action=read" class="nav-link">
+                    <a href="/index.php?model=product&action=read" class="nav-link">
                         <i class="nav-icon fas fa-table"></i>
                             <p> 
                                 Товары 
@@ -43,7 +43,7 @@
                     </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="http://localhost/shop/backend/index.php?model=product&action=create" class="nav-link">
+                    <a href="/index.php?model=product&action=create" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                             <p>
                                 Добавление Товара
@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="http://localhost/shop/backend/index.php?model=product&action=read" class="nav-link">
+                    <a href="/index.php?model=product&action=read" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                             <p>
                                 Список Товаров
@@ -62,7 +62,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="http://localhost/shop/backend/index.php?model=category&action=read" class="nav-link">
+                    <a href="/index.php?model=category&action=read" class="nav-link">
                         <i class="nav-icon fas fa-table"></i>
                             <p> 
                                 Категории
@@ -71,7 +71,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="http://localhost/shop/backend/index.php?model=category&action=create" class="nav-link">
+                            <a href="/index.php?model=category&action=create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>
                                         Дабовление Категории
@@ -79,7 +79,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://localhost/shop/backend/index.php?model=category&action=read" class="nav-link">
+                            <a href="/index.php?model=category&action=read" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Список Категории
@@ -90,7 +90,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="http://localhost/shop/backend/index.php?model=shop&action=read" class="nav-link">
+                    <a href="/index.php?model=shop&action=read" class="nav-link">
                         <i class="nav-icon fas fa-table"></i>
                             <p>
                                 Магазины
@@ -99,7 +99,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="http://localhost/shop/backend/index.php?model=shop&action=create" class="nav-link">
+                            <a href="/index.php?model=shop&action=create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>
                                         Дабовление Магазина
@@ -107,7 +107,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://localhost/shop/backend/index.php?model=shop&action=read" class="nav-link">
+                            <a href="/index.php?model=shop&action=read" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>
                                         Список Магазинов
@@ -118,7 +118,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="http://localhost/shop/backend/index.php?model=news&action=read" class="nav-link">
+                    <a href="/index.php?model=news&action=read" class="nav-link">
                         <i class="nav-icon fas fa-table"></i>
                             <p>
                                Новости
@@ -127,7 +127,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="http://localhost/shop/backend/index.php?model=news&action=create" class="nav-link">
+                            <a href="/index.php?model=news&action=create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>
                                         Дабовление Новостей
@@ -135,7 +135,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://localhost/shop/backend/index.php?model=news&action=read" class="nav-link">
+                            <a href="/index.php?model=news&action=read" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>
                                         Список Новостей
@@ -146,7 +146,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="http://localhost/shop/backend/index.php?model=order&action=read" class="nav-link">
+                    <a href="/index.php?model=order&action=read" class="nav-link">
                         <i class="nav-icon fas fa-table"></i>
                         <p>
                             Orders
@@ -155,7 +155,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="http://localhost/shop/backend/index.php?model=order&action=create" class="nav-link">
+                            <a href="/index.php?model=order&action=create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Create Orders
@@ -163,7 +163,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://localhost/shop/backend/index.php?model=order&action=read" class="nav-link">
+                            <a href="/index.php?model=order&action=read" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Order List

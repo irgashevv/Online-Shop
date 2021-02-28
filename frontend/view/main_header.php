@@ -24,18 +24,18 @@
 					<ul class="desktop-element">
 						<li><?=!empty($currentUser['login'])
                             ? '<span style="color: #fff"> Hello, ' . $currentUser['login'] . '!</span>'
-                            : '<a href="http://localhost/shop/frontend/index.php?model=register&action=form">Register</a>'?></li>
+                            : '<a href="/index.php?model=register&action=form">Register</a>'?></li>
                         <li><?=!empty($currentUser['login'])
-                        ? '<a href="http://localhost/shop/frontend/index.php?model=auth&action=logout">Sign Out</a>'
-                        : '<a href="http://localhost/shop/frontend/index.php?model=site&action=login">Sign in</a>'?></li>
-                        <?=!empty($currentUser['login']) ? '<li><a href="http://localhost/shop/frontend/index.php?model=basket&action=view">Basket</a></li>' : ''?>
+                        ? '<a href="/index.php?model=auth&action=logout">Sign Out</a>'
+                        : '<a href="/index.php?model=site&action=login">Sign in</a>'?></li>
+                        <?=!empty($currentUser['login']) ? '<li><a href="/index.php?model=basket&action=view">Basket</a></li>' : ''?>
 						<li><a href="">Help</a></li>
 					</ul>
 					<div id="mobile-logo" class="mobile-element">BOOKS</div>
 				<select id="top-link" onchange="document.location=this.value" class="mobile-element">
 					<option disable selected></option>
-					<option value="http://localhost/shop/frontend/index.php?model=register&action=form">Register</option>
-                    <option value="http://localhost/shop/frontend/index.php?model=site&action=login">Sign in</option>
+					<option value="/index.php?model=register&action=form">Register</option>
+                    <option value="/index.php?model=site&action=login">Sign in</option>
                     <option value="#order">Order Status</option>
 					<option value="#help">Help</option>
 				</select>
@@ -44,7 +44,7 @@
 			<div class="header-panel">
 				<div class="width1024 flex">
 					<div id="logo">
-						<a href="http://localhost/shop/frontend/index.php">
+						<a href="/index.php">
                             <img src="http://localhost/shop/frontend/imgs/logo.png" alt="">
                         </a>
 					</div>

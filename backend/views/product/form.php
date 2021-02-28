@@ -17,7 +17,7 @@
     </section>
     <section class="content">
         <div>
-            <form class="form-horizontal" action="http://localhost/shop/backend/index.php?model=product&action=save" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="/index.php?model=product&action=save" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                     <input type="hidden" value="<?=$one['id'] ?? ''?>" name="id">
                 <div class="form-group row">

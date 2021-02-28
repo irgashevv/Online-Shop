@@ -1,4 +1,6 @@
-<?php include_once __DIR__ . "/../main_header.php"; ?>
+<?php
+    include_once __DIR__ . "/../main_header.php";
+?>
 
 <div class="width1024">
     <?php if (empty($items) || !is_array($items)) : ?>
@@ -28,7 +30,7 @@
 						<td><?=++$key?></td>
 						<td>
 							<a href="index.php?model=product&action=view&id=<?=$item['product_id']?>">
-								<img style="width: 150px; height: 200px;" src="/shop/uploads/products/<?=$item['product']['picture']?>">
+								<img style="width: 150px; height: 200px;" src="http://localhost/shop/uploads/products/<?=$item['product']['picture']?>">
 							</a>
 						</td>
 						<td>
@@ -55,7 +57,7 @@
 				<tr><td colspan="6" class="total">Total:</td><td><?=$total?></td></tr>
 			</tbody>
 		</table>
-        <a href="http://localhost/shop/frontend/index.php?model=order&action=index" id="btn-create-order">Create Order</a>
+        <a href="/index.php?model=order&action=index" id="btn-create-order">Create Order</a>
 
     </div>
     <?php endif ; ?>

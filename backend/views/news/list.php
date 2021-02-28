@@ -45,9 +45,9 @@
 </i>
 View
 </a-->
-                                <a class="btn btn-info btn-sm" href="http://localhost/shop/backend/index.php?model=news&action=update&id=<?=$n['id']?>">
+                                <a class="btn btn-info btn-sm" href="/index.php?model=news&action=update&id=<?=$n['id']?>">
                                     <i class="fas fa-pencil-alt"> </i> Редактировать </a>
-                                <a class="btn btn-danger btn-sm" href="http://localhost/shop/backend/index.php?model=news&action=delete&id=<?=$n['id']?>">
+                                <a class="btn btn-danger btn-sm" href="/index.php?model=news&action=delete&id=<?=$n['id']?>">
                                     <i class="fas fa-trash"> </i> Удалить </a>
                             </td>
                         </tr>

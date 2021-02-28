@@ -36,7 +36,7 @@
                         <tr>
                             <td><?=$p['id']?></td>
                             <td><?=$p['title']?></td>
-                            <td><img src="/shop/uploads/products/<?=$p['picture']?>"></td>
+                            <td><img src="http://localhost/shop/uploads/products/<?=$p['picture']?>"></td>
                             <td><?=$p['preview']?></td>
                             <td><?=$p['content']?></td>
                             <td><?=$p['price']?></td>
@@ -49,9 +49,9 @@
 </i>
 View
 </a-->
-                                <a class="btn btn-info btn-sm" href="http://localhost/shop/backend/index.php?model=product&action=update&id=<?=$p['id']?>">
+                                <a class="btn btn-info btn-sm" href="/index.php?model=product&action=update&id=<?=$p['id']?>">
                                     <i class="fas fa-pencil-alt"> </i> Edit </a>
-                                <a class="btn btn-danger btn-sm" href="http://localhost/shop/backend/index.php?model=product&action=delete&id=<?=$p['id']?>">
+                                <a class="btn btn-danger btn-sm" href="/index.php?model=product&action=delete&id=<?=$p['id']?>">
                                     <i class="fas fa-trash"> </i> Delete </a>
                             </td>
                         </tr>

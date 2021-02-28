@@ -6,14 +6,14 @@
 
 #login-container {
     width: 300px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 </style>
 
     <div id="login-container" class="width1024">
         <div><br><br><br><br></div>
         <h1>Login</h1>
-            <form action="index.php?model=auth&action=check" method="post">
+            <form action="/index.php?model=auth&action=check" method="post">
                 <div>
                     <label for="">Login: </label><input type="text" name="login">
                 </div>

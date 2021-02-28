@@ -57,7 +57,7 @@
 View
 </a-->
                                 <a class="btn btn-info btn-sm"
-                                   href="http://localhost/shop/backend/index.php?model=order&action=update&id=<?=$n['id']?>"><i class="fas fa-pencil-alt"> </i> Редактировать </a>
+                                   href="/index.php?model=order&action=update&id=<?=$n['id']?>"><i class="fas fa-pencil-alt"> </i> Редактировать </a>
                             </td>
                         </tr>
 <?php endforeach; ?>
