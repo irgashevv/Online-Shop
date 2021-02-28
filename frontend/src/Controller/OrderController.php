@@ -75,7 +75,7 @@ class OrderController
         $this->basketService->clearBasket($basketId);
 
 
-            header("location: http://localhost/shop/frontend/index.php?model=order&action=success&order_id=" . $orderId);
+            header("location: /index.php?model=order&action=success&order_id=" . $orderId);
     }
 
     public  function  success()

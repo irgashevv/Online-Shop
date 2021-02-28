@@ -1,7 +1,13 @@
 <?php
-
+include_once __DIR__ . "/UserService.php";
 class SecurityService
 {
+    /**
+     * @param $user
+     * @param $password
+     * @return bool
+     * @throws Exception
+     */
     public function checkPassword($user, $password)
     {
 
@@ -26,7 +32,14 @@ class SecurityService
 
     public static function redirectToLoginPage()
     {
-        header("location: http://localhost/shop/frontend/index.php?model=site&action=login");
+        header("location: /index.php?model=site&action=login");
         die();
+    }
+
+    public static function isAuthorized()
+    {
+        if (empty(UserService::getCurrentUser())) return false;
+
+        return true;
     }
 }

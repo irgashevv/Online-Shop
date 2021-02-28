@@ -1,11 +1,11 @@
 <?php
-	include_once __DIR__ . "/Interface/ControllerInterface.php";
-include_once __DIR__ . "/../../../common/src/Model/Order.php";
-include_once __DIR__ . "/../../../common/src/Model/OrderItem.php";
-include_once __DIR__ . "/../../../common/src/Service/OrderService.php";
+    include_once __DIR__ . "/AbstractController.php";
+    include_once __DIR__ . "/../../../common/src/Model/Order.php";
+    include_once __DIR__ . "/../../../common/src/Model/OrderItem.php";
+    include_once __DIR__ . "/../../../common/src/Service/OrderService.php";
 
 
-	class OrderController implements ControllerInterface
+	class OrderController extends AbstractController
 	{
 		public function save()
 		{

@@ -1,11 +1,11 @@
 <?php
-	include_once __DIR__ . "/Interface/ControllerInterface.php";
+	include_once __DIR__ . "/AbstractController.php";
 	include_once __DIR__ . "/../../../common/src/Model/Product.php";
 	include_once __DIR__ . "/../../../common/src/Service/FileUploader.php";
 
-	class ProductController implements ControllerInterface
+	class ProductController extends AbstractController
 	{
-		public function save()
+        public function save()
 		{
 			if (!empty($_POST))
 			{

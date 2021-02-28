@@ -1,16 +1,9 @@
 <?php
-    include_once __DIR__ . "/Interface/ControllerInterface.php";
+    include_once __DIR__ . "/AbstractController.php";
     include_once __DIR__ . "/../../../common/src/Model/Category.php";
 
-class CategoryController implements ControllerInterface
+class CategoryController extends AbstractController
     {
-        private $conn;
-
-        public function __construct()
-        {
-            $this->conn = mysqli_connect("localhost", "shop_user", "shop_password", "db_shop");
-        }
-
         public function save()
         {
             if (!empty($_POST))
