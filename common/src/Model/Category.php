@@ -33,11 +33,13 @@ class Category
 			where id=" . $this->id . " limit 1";
         } else
             {
-		        $query = "INSERT INTO categories VALUES (null,
+		        $query = "INSERT INTO categories VALUES (
+                null,
 		        '" . $this->title . "',
 		        '" . $this->groupId . "',
 		        '" . $this->parentId . "')";
             }
+
 	$result = mysqli_query($this->conn, $query);
 	}
 	public function all()
@@ -48,7 +50,7 @@ class Category
 
 	public function getById($id)
     {
-		$result = mysqli_query($this->conn, "select * from categories where id=$id ");
+		$result = mysqli_query($this->conn, "select * from categories where id = $id ");
 		$one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		
 		return reset($one);

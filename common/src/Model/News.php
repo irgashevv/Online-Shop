@@ -41,14 +41,15 @@ class News
 	    {
 	    	$query = "UPDATE news set 
 		    title='" . $this->title . "',
-		    preview='" . $this->preview . "',".
-		    ((!empty($this->picture)) ? "picture='" . $this->picture . "'," : "")
+		    preview='" . $this->preview . "',
+		    ". ((!empty($this->picture)) ? "picture='" . $this->picture . "'," : "")
 		    . "content='". $this->content . "',
-		    updated='" . $this->updated . "'
-		    where id=" . $this->id . " limit 1";
+		    updated='" . $this->updated . "' where 
+		    id=" . $this->id . " limit 1";
         } else
             {
-                $query = "INSERT INTO news VALUES (null,
+                $query = "INSERT INTO news VALUES (
+                null,
 		        '" . $this->title . "',
 		        '" . $this->picture . "',
 		        '" . $this->preview . "',
@@ -67,7 +68,7 @@ class News
 
 	public function getById($id)
     {
-		$result = mysqli_query($this->conn, "select * from news where id=$id ");
+		$result = mysqli_query($this->conn, "select * from news where id = $id ");
 		$one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		return reset($one);
 	}

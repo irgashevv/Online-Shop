@@ -165,7 +165,13 @@ class User
 		    where id=" . $this->id . " limit 1";
         } else
         {
-            $query = "INSERT INTO `user` (`id`, `name`, `phone`, `email`, `password` , `roles`) VALUES (
+            $query = "INSERT INTO `user` (
+                `id`, 
+                `name`, 
+                `phone`, 
+                `email`, 
+                `password`, 
+                `roles`) VALUES (
                 null,
 		        '" . $this->getName() . "',
 		        '" . $this->getPhone() . "',
@@ -174,7 +180,8 @@ class User
 		        '" . json_encode($this->getRoles()) . "')";
         }
         $result = mysqli_query($this->conn, $query);
-        if (!$result) {
+        if (!$result)
+        {
             throw new Exception(mysqli_error($this->conn), 400);
         }
     }
@@ -185,7 +192,8 @@ class User
      */
     public function getById($id)
     {
-        $result = mysqli_query($this->conn, "select * from `user` where id = " . $id . " limit 1");
+        $result = mysqli_query($this->conn, "select * from `user` where 
+            id = " . $id . " limit 1");
 
         $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -198,13 +206,43 @@ class User
      */
     public function getByEmail($email)
     {
-        $result = mysqli_query($this->conn, "select * from `user` where email = '" . $email . "' limit 1");
+        $result = mysqli_query($this->conn, "select * from `user` where 
+            email = '" . $email . "' limit 1");
 
-        if (!$result) {
+        if (!$result)
+        {
             throw new Exception("User not Found", 404);
         }
         $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         return reset($one);
+    }
+
+    /**
+     * @param array $roles
+     * @param $controller
+     * @param $action
+     * @return bool
+     * @throws Exception
+     */
+    public function isAccess(array $roles, $controller, $action)
+    {
+        $permission = SecurityService::getPermissionNameByControllerAndAction($controller, $action);
+
+        $result = mysqli_query($this->conn, "select * from `rbac_access` where 
+            role in  ('" . implode("','", $roles) . "') and permission = '$permission'");
+
+        if (!$result)
+        {
+            throw new Exception("Permission Error", 400);
+        }
+
+        $accesses = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        foreach ($accesses as $access)
+        {
+            if ($access)return true;
+        }
+        throw new Exception("No Permission", 400);
     }
 }

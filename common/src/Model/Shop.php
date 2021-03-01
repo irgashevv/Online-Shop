@@ -29,11 +29,12 @@ class Shop
 	    {
 		    $query = "UPDATE shops set 
 	    	title='" . $this->title . "',
-		    address='" . $this->address . "'
-		    where id=" . $this->id . " limit 1";
+		    address='" . $this->address . "' where
+		    id=" . $this->id . " limit 1";
         } else
             {
-		        $query = "INSERT INTO shops VALUES (null,
+		        $query = "INSERT INTO shops VALUES (
+                null,
 		        '" . $this->title . "',
 		        '" . $this->address . "')";
             }

@@ -1,5 +1,7 @@
 <?php
+
 include_once __DIR__ . "/UserService.php";
+
 class SecurityService
 {
     /**
@@ -26,7 +28,7 @@ class SecurityService
 
     public static function redirectToStartPage()
     {
-        header("location: http://localhost/shop/frontend/index.php");
+        header("location: /");
         die();
     }
 
@@ -41,5 +43,10 @@ class SecurityService
         if (empty(UserService::getCurrentUser())) return false;
 
         return true;
+    }
+
+    public static function getPermissionNameByControllerAndAction($controller, $action)
+    {
+        return strtoupper($controller) . '_' . strtoupper($action);
     }
 }

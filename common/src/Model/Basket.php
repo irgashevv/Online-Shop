@@ -16,10 +16,12 @@ class Basket
 		$this->userId = $userId;
 	}
 
-
 	public function save()
 	{
-		$query = "INSERT INTO basket VALUES (null,'" . $this->userId . "')";
+		$query = "INSERT INTO basket VALUES (
+            null,
+            '" . $this->userId . "')";
+
 		$result = mysqli_query($this->conn, $query);
 		if (!$result)
 		{
@@ -29,7 +31,9 @@ class Basket
 
 	public function getFromDB()
 	{
-		$result = mysqli_query($this->conn, "select * from basket where user_id = " . $this->userId . " limit 1");
+		$result = mysqli_query($this->conn, "select * from basket where 
+            user_id = " . $this->userId . " limit 1");
+
 		$one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		return reset($one);
 	}
@@ -38,5 +42,4 @@ class Basket
 	{
 		mysqli_query ($this->conn, "delete from basket where user_id = $userId");
 	}
-
 }

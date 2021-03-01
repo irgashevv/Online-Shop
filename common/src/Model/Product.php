@@ -56,7 +56,8 @@ class Product
 		where id=" . $this->id . " limit 1";
     } else
         {
-		    $query = "INSERT INTO products VALUES (null,
+		    $query = "INSERT INTO products VALUES (
+            null,
 		    '" . $this->title . "',
 		    '" . $this->picture . "',
 		    '" . $this->preview . "',
@@ -77,7 +78,7 @@ class Product
 
 	public function getById($id)
     {
-		$result = mysqli_query($this->conn, "select * from products where id=$id ");
+		$result = mysqli_query($this->conn, "select * from products where id = $id ");
 		$one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		
 		return reset($one);

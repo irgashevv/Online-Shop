@@ -30,8 +30,18 @@ class MigrationAddUserTable
             }
 
             $result = mysqli_query($this->conn, "
-            INSERT INTO `user` ( `name`, `phone`, `email`, `password`, `roles`) 
-            VALUES ( 'superadmin', '12323', 'admin@mail.ru', '" . UserService::encodePassword('superadmin') . "', '[\"ROLE_SUPER_ADMIN\"]');");
+            INSERT INTO `user` ( 
+            `name`, 
+            `phone`, 
+            `email`, 
+            `password`, 
+            `roles`) 
+                VALUES ( 
+                'superadmin', 
+                '12323', 
+                'admin@mail.ru', 
+                '" . UserService::encodePassword('superadmin') . "',
+                 '[\"ROLE_SUPER_ADMIN\"]');");
 
 
             if (!$result)

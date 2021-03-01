@@ -385,13 +385,13 @@ class Order
 		{
 			throw new Exception(mysqli_error($this->conn));
 		}
-
 		    return true;
 	}
 
 	public function getFromDB()
 	{
-		$result = mysqli_query($this->conn, "select * from orders where user_id = " . $this->userId . " limit 1");
+		$result = mysqli_query($this->conn, "select * from orders where 
+            user_id = " . $this->userId . " limit 1");
 		$one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		return reset($one);
 	}
@@ -402,13 +402,13 @@ class Order
 		return mysqli_fetch_all($result, MYSQLI_ASSOC);
 	}
 
-
     /**
      * @return mixed
      */
     public function getById($id)
     {
-        $result = mysqli_query($this->conn, "select * from orders where id = " . $id . " limit 1");
+        $result = mysqli_query($this->conn, "select * from orders where 
+            id = " . $id . " limit 1");
 
         $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 

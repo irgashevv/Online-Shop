@@ -7,12 +7,12 @@ class SiteController
 {
 	public function index()
 	{
-        header("Location: /index.php?model=product&action=read");
+        header("Location: /?model=product&action=read");
+        die();
 	}
 
     public function login()
     {
         include_once __DIR__ . "/../../views/site/login.php";
     }
-
 }
