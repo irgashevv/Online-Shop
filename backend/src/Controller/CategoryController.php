@@ -4,6 +4,12 @@
 
 class CategoryController extends AbstractController
     {
+        public function all()
+        {
+            $all = (new Deli())->all();
+            include_once __DIR__ . "/../../views/product/list.php";
+        }
+
         public function save()
         {
             if (!empty($_POST))

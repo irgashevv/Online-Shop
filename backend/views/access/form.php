@@ -22,7 +22,7 @@
 		<div>
 			<form class="form-horizontal" action="/?model=access&action=save" method="post" enctype="multipart/form-data">
 				<div class="card-body">
-                    <table>
+                    <table id="access-table">
                         <thead>
                             <tr>
                                 <td>Roles</td>

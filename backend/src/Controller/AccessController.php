@@ -13,6 +13,9 @@
                 print_r($_POST);
                 die();
             }
+
+			$accesses =
+
 			return $this->read();
 		}
 
