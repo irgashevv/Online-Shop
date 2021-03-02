@@ -39,6 +39,6 @@ class RegisterController
 
     public function form()
     {
-        include_once __DIR__ . "/../../view/register/form.php";
+        include_once __DIR__ . "/../../views/register/form.php";
     }
 }

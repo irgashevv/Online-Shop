@@ -1,4 +1,4 @@
-<?php include_once __DIR__ . "/../main_header.php"; ?>
+<?php include_once __DIR__ . "/../header.php"; ?>
 <div class="content-wrapper">
 <section class="content-header">
         <div class="container-fluid">
@@ -18,7 +18,7 @@
 </section>
 <section class="content">
         <div>
-            <form class="form-horizontal" action="http://localhost/shop/backend/index.php?model=news&action=save" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="/index.php?model=news&action=save" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                     <input type="hidden" value="<?=$one['id'] ?? ''?>" name="id">
                 <div class="form-group row">

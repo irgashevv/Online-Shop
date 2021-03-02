@@ -8,7 +8,7 @@ class ProductController
 	public function all()
 	{
 		$all = (new Product())->all();
-		include_once __DIR__ . "/../../view/product/list.php";
+		include_once __DIR__ . "/../../views/product/list.php";
 	}
 
 	public function view()
@@ -29,7 +29,7 @@ class ProductController
                 throw new Exception ("Product Not Found", 404);
             }
 
-            include_once __DIR__ . "/../../view/product/view.php";
+            include_once __DIR__ . "/../../views/product/view.php";
         }catch(Exception $e)
         {
                 ExceptionService::error($e, 'frontend');

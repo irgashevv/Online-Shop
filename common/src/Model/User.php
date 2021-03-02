@@ -53,6 +53,7 @@ class User
         $this->setEmail($email);
         $this->setPassword($password);
         $this->setRoles($roles);
+
     }
 
     /**

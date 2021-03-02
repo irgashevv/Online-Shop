@@ -21,7 +21,7 @@ class OrderController
 
     public function index()
     {
-        include_once __DIR__ . "/../../view/order/form.php";
+        include_once __DIR__ . "/../../views/order/form.php";
     }
 
     public function create()
@@ -82,6 +82,6 @@ class OrderController
     {
         $orderId = (int)$_GET['order_id'];
 
-        include_once __DIR__ . "/../../view/Order/success.php";
+        include_once __DIR__ . "/../../views/Order/success.php";
     }
 }

@@ -1,5 +1,5 @@
 <?php
-    include_once __DIR__ . "/../main_header.php";
+    include_once __DIR__ . "/../header.php";
 ?>
 
 <style>

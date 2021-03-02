@@ -35,7 +35,7 @@ class AuthController
 	        [
                 'id' => $user['id'],
                 'login' => $user['email'],
-                'role' => json_encode($user['roles'], true)
+                'role' => json_decode($user['roles'], true)
             ]);
 	    SecurityService::redirectToStartPage();
     }

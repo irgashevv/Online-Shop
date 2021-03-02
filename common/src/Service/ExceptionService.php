@@ -10,6 +10,8 @@ class ExceptionService
         $code = $e->getCode();
         $message = $e->getMessage();
 
-        include_once __DIR__ . "/../../../$side/view/exeptions/400.php";
+//        print_r($e->getTraceAsString());
+
+        include_once __DIR__ . "/../../../$side/views/exceptions/400.php";
     }
 }

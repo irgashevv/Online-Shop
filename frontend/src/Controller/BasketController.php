@@ -63,7 +63,7 @@ class BasketController
 		$items = $result['items'];
 		$total = $result['total'];
 
-		include_once __DIR__ . "/../../view/basket/view.php";
+		include_once __DIR__ . "/../../views/basket/view.php";
 	}
 
 	public function delete()

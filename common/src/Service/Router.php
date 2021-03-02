@@ -13,6 +13,8 @@ class Router
 
     public function index()
     {
+        global $side;
+
         try
         {
             $model = $_GET['model'] ?? 'site';
@@ -39,7 +41,7 @@ class Router
             }
             catch (Exception $e)
             {
-                ExceptionService::error($e, 'frontend');
+                ExceptionService::error($e, $side);
             }
     }
 }

@@ -1,4 +1,4 @@
-<?php include_once __DIR__ . "/../main_header.php"; ?>
+<?php include_once __DIR__ . "/../header.php"; ?>
 
 <div id="banner-container" class="width1024">
 	<div id="slider">

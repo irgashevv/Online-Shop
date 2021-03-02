@@ -9,12 +9,12 @@ class SiteController
 	{
 
 		$all = (new Product())->all();
-		include_once __DIR__ . "/../../view/site/index.php";
+		include_once __DIR__ . "/../../views/site/index.php";
 	}
 
     public function login()
     {
-        include_once __DIR__ . "/../../view/site/login.php";
+        include_once __DIR__ . "/../../views/site/login.php";
     }
 
 }
