@@ -20,23 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/dist/css/shop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Controller/DeliveryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Controller/PaymentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/delivery/form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/delivery/list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/payment/form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/payment/list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/site/menu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/Model/Access.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/Model/Delivery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/Model/Payment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dist/css/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/css/shop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/Controller/AccessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/AccessController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/Interface/ControllerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/Interface/ControllerInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Migrations/280220211506_migration_add_rbac.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Migrations/280220211506_migration_add_rbac.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/views/access/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/access/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/Access.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Access.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +112,8 @@
       <workItem from="1614527222546" duration="4655000" />
       <workItem from="1614602803400" duration="9000" />
       <workItem from="1614602865291" duration="11736000" />
-      <workItem from="1614678964057" duration="18314000" />
+      <workItem from="1614678964057" duration="18426000" />
+      <workItem from="1614757076522" duration="4955000" />
     </task>
     <servers />
   </component>

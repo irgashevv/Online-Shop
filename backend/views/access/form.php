@@ -25,9 +25,9 @@
                     <table id="access-table">
                         <thead>
                             <tr>
-                                <td>Roles</td>
+                                <td></td>
                                 <?php foreach ($roles as $role) : ?>
-                                    <td><?=$role?></td>
+                                    <td><div><span><?=$role?></span></div></td>
                                 <?php endforeach; ?>
                             </tr>
                         </thead>
@@ -36,7 +36,9 @@
                                 <tr>
                                     <td><?=$permission?></td>
                                     <?php foreach ($roles as $role) : ?>
-                                        <td><input type="checkbox" name="access[<?=$role?>][<?=$permission?>]"></td>
+                                        <td><input type="checkbox" <?=(isset($accesses[$role][$permission]))
+                                            ? 'checked="checked"' : ''?>
+                                    name="access[<?=$role?>][<?=$permission?>]"></td>
                                     <?php endforeach; ?>
                                 </tr>
                                 <?php endforeach; ?>
