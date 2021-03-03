@@ -17,4 +17,17 @@ class OrderService
         ];
     }
 
+    public function calcTotal(array $quantityAndProducts)
+    {
+        $total = 0;
+
+        foreach ($quantityAndProducts as $item) {
+            /**
+             * Product $product
+             */
+            $product = $item['product'];
+            $total += $item['quantity'] * $product->price;
+        }
+        return $total;
+    }
 }

@@ -20,12 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/Controller/PermissionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/permission/form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/permission/list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureOrderItems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureOrders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Test/AbstractTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Test/OrderServiceTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/AccessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/AccessController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/DBConnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/DBConnector.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/OrderService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/OrderService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,18 +61,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/Fixtures" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Fixtures" />
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Command" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\views" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Controller" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\common\src\Model" />
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\views\delivery" />
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\views\category" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\css" />
@@ -114,7 +116,7 @@
       <workItem from="1614602803400" duration="9000" />
       <workItem from="1614602865291" duration="11736000" />
       <workItem from="1614678964057" duration="18426000" />
-      <workItem from="1614757076522" duration="7544000" />
+      <workItem from="1614757076522" duration="19944000" />
     </task>
     <servers />
   </component>
@@ -134,10 +136,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="476" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1614764125231">
+    <state x="476" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1614774619625">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="476" y="119" key="#com.intellij.ide.util.MemberChooser/0.40.1366.728@0.40.1366.728" timestamp="1614764125231" />
+    <state x="476" y="119" key="#com.intellij.ide.util.MemberChooser/0.40.1366.728@0.40.1366.728" timestamp="1614774619625" />
     <state x="392" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614695361844">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
@@ -146,18 +148,18 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="413" y="150" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1366.728@0.40.1366.728" timestamp="1614693565769" />
-    <state x="310" y="126" key="NewPhpClassDialog" timestamp="1614699468620">
+    <state x="310" y="126" key="NewPhpClassDialog" timestamp="1614770242455">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="310" y="126" key="NewPhpClassDialog/0.40.1366.728@0.40.1366.728" timestamp="1614699468620" />
+    <state x="310" y="126" key="NewPhpClassDialog/0.40.1366.728@0.40.1366.728" timestamp="1614770242455" />
     <state x="518" y="327" key="NewPhpFileDialog" timestamp="1614698675499">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="518" y="327" key="NewPhpFileDialog/0.40.1366.728@0.40.1366.728" timestamp="1614698675499" />
-    <state x="390" y="139" width="585" height="582" key="find.popup" timestamp="1614695374916">
+    <state x="390" y="139" width="585" height="582" key="find.popup" timestamp="1614774845952">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="390" y="139" width="585" height="582" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1614695374916" />
+    <state x="390" y="139" width="585" height="582" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1614774845952" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1614763955277">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
