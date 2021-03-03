@@ -12,11 +12,7 @@ class DBConnector
         $db = "db_shop"
     )
 	{
-		$this->connect = mysqli_connect(
-		    $host,
-            $user,
-            $password,
-            $db);
+		$this->connect = mysqli_connect($host, $user, $password, $db);
 	}
 
 	public function connect()
