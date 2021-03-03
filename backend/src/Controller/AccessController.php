@@ -15,7 +15,7 @@
 
                     if ((new Access())->createAll($_POST['access'] ?? [])){
 
-                        header('Location /?model=access&action=update');
+                        header('Location: /?model=access&action=update');
                         die();
                     }
                 }

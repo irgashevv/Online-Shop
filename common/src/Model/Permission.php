@@ -20,7 +20,24 @@ class Permission
     {
         $query = "INSERT INTO rbac_permission VALUES ('" . $this->permission . "')";
 
-	$result = mysqli_query($this->conn, $query);
+	    $result = mysqli_query($this->conn, $query);
+	    if (!$result) {
+            throw new Exception(mysqli_error($this->conn), 400);
+        }
+	}
+
+    /**
+     * @param $name
+     * @throws Exception
+     */
+	public function deleteByName($name)
+    {
+        $query = "DELETE FROM rbac_permission WHERE permission = '$name'";
+
+	    $result = mysqli_query($this->conn, $query);
+	    if (!$result) {
+            throw new Exception(mysqli_error($this->conn), 400);
+        }
 	}
 
 	public function all()
