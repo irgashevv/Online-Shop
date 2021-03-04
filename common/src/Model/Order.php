@@ -325,11 +325,14 @@ class Order
     }
 
     /**
-     * @param false|mysqli $conn
+     * @param $conn
+     * @return $this
      */
     public function setConn($conn)
     {
         $this->conn = $conn;
+
+        return $this;
     }
 
 

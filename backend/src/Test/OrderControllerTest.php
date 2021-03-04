@@ -41,13 +41,48 @@ class OrderControllerTest extends AbstractTest
             'name' => 'Ибра',
             'phone' => '123-123',
             'email' => 'irg@mail.ru',
-            'delivery' => '1',
+            'delivery' => '2',
             'payment' => '2',
             'comment' => 'Comment'
         ];
 
         $orderController = new OrderController($this->conn->connect());
         $orderController->create();
+
+
+        // Check Exists Order in DB
+
+        $orders = (new Order())->setConn($this->conn->connect())->all();
+
+
+        if (sizeof($orders) !== 1) {
+            print "Error: wrong Orders count" . PHP_EOL;
+            die('Test Was Crashed');
+        }
+
+        $order = reset ($orders);
+        foreach (['email' => $_POST['email'], 'phone' => $_POST['phone']] as $key => $value) {
+            if ($order[$key] !== $value) {
+                print "Error: wrong value". $key . PHP_EOL;
+                die('Test Was Crashed');
+            }
+        }
+
+        $orderItems = (new OrderItem())->setConn($this->conn->connect())->getByOrderId($order['id']);
+
+        if (sizeof($orderItems) !== 3) {
+            print "Error: wrong Order_items count" . PHP_EOL;
+            die('Test Was Crashed');
+        }
+
+        foreach ($orderItems as $orderItem) {
+
+            if (!in_array($orderItem['product_id'], [1, 3, 5])) {
+                print "Error: wrong Order_items id = " . $orderItem['product_id'] . PHP_EOL;
+                die('Test Was Crashed');
+            }
+
+        }
 
         $_POST = [];
 
