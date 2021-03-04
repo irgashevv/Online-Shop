@@ -12,16 +12,20 @@ class OrderController
 {
     private $basketService;
 
-    private $testConn;
+    private $conn;
 
-    public function __construct($testConn = null)
+    public function __construct($conn = null)
     {
         // TODO Check BasketService with OrderController
-        $this->basketService = new BasketDBService();
+
 //        $this->basketService = new BasketCookieService();
 
-        if (!empty($testConn)) {
-            $this->testConn = $testConn;
+        if (!empty($conn)) {
+            $this->conn = $conn;
+            $this->basketService = new BasketDBService($conn);
+        } else {
+            $this->basketService = new BasketDBService();
+
         }
     }
 
@@ -58,8 +62,8 @@ class OrderController
             $status,
             $updated);
 
-        if (!empty($this->testConn)) {
-            $order->setConn($this->testConn);
+        if (!empty($this->conn)) {
+            $order->setConn($this->conn);
         }
 
 
@@ -69,8 +73,8 @@ class OrderController
                 throw new Exception("Order ID is null", 400);
             }
 
-        $basketId = $this->basketService->getBasketIdByUserId($userId, $this->testConn);
-        $items = $this->basketService->getBasketProducts($basketId, $this->testConn);
+        $basketId = $this->basketService->getBasketIdByUserId($userId);
+        $items = $this->basketService->getBasketProducts($basketId);
             if (empty($items))
             {
                 throw new Exception("Basket is Empty", 400);
@@ -79,12 +83,12 @@ class OrderController
             {
                 /** @var  $orderItem $orderItem */
                 $orderItem = new OrderItem($orderId, (int)$item['product_id'], (int)$item['quantity']);
-                if (!empty($this->testConn)) { $orderItem->setConn($this->testConn); }
+                if (!empty($this->conn)) { $orderItem->setConn($this->conn); }
                 $orderItem->save();
             }
 
             // Clear Basket
-        $this->basketService->clearBasket($basketId, $this->testConn);
+        $this->basketService->clearBasket($basketId);
 
 
             header("location: /index.php?model=order&action=success&order_id=" . $orderId);

@@ -7,6 +7,13 @@ include_once __DIR__ . "/../Service/BasketService.php";
 
 class BasketDBService extends BasketService
 {
+    const TEST_USER_ID = 1;
+    private $conn;
+
+    public function __construct($conn = null)
+    {
+        $this->conn = $conn;
+    }
 
     public static function getBasketByUserId($userId)
     {
@@ -39,23 +46,26 @@ class BasketDBService extends BasketService
         $item->save();
     }
 
-    public function getBasketProducts($basket_id, $testConn = null)
+    public function getBasketProducts($basket_id)
     {
-        if (!empty($testConn)) {
-            return (new BasketItem())->setConn($testConn)->getByBasketId($basket_id);
+        if (!empty($this->conn)) {
+            return (new BasketItem())->setConn($this->conn)->getByBasketId($basket_id);
         }
         return (new BasketItem())->getByBasketId($basket_id);
     }
 
-    public function clearBasket($basket_id, $testConn = null)
+    public function clearBasket($basket_id)
     {
-        (new BasketItem())->setConn($testConn)->clearByBasketById($basket_id);
+        if (!empty($this->conn)) {
+            (new BasketItem())->setConn($this->conn)->clearByBasketById($basket_id);
+        }
+        (new BasketItem())->clearByBasketById($basket_id);
     }
 
-    public function getBasketIdByUserId($userId, $testConn = null)
+    public function getBasketIdByUserId($userId)
     {
-        if (!empty($testConn)) {
-            return 1;
+        if (!empty($this->conn)) {
+            return self::TEST_USER_ID;
         }
         return (new Basket($userId))->getFromDB()['id'];
     }

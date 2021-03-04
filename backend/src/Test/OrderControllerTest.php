@@ -77,7 +77,7 @@ class OrderControllerTest extends AbstractTest
 
         foreach ($orderItems as $orderItem) {
 
-            if (!in_array($orderItem['product_id'], [1, 3, 5])) {
+            if (!in_array($orderItem['product_id'], [47, 49, 51])) {
                 print "Error: wrong Order_items id = " . $orderItem['product_id'] . PHP_EOL;
                 die('Test Was Crashed');
             }
@@ -87,9 +87,11 @@ class OrderControllerTest extends AbstractTest
         $_POST = [];
 
         // Drop Test Tables
-//        $this->dropTableByName('basket');
-//        $this->dropTableByName('basket_item');
-//        $this->dropTableByName('user');
-//        $this->dropTableByName('products');
+        $this->dropTableByName('basket');
+        $this->dropTableByName('basket_item');
+        $this->dropTableByName('user');
+        $this->dropTableByName('products');
+        $this->dropTableByName('orders');
+        $this->dropTableByName('order_item');
     }
 }
