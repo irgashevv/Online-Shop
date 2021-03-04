@@ -20,6 +20,12 @@ class OrderItem
 		$this->quantity = $quantity;
 	}
 
+    public function setConn($conn)
+    {
+        $this->conn = $conn;
+
+        return $this;
+    }
 
 	public function save()
 	{

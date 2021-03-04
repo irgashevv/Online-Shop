@@ -20,13 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureOrderItems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureOrders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureBasket.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureBasketItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Test/OrderControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Fixtures/Fixture01.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Fixtures/Fixture01.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Test/AbstractTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Test/AbstractTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Fixtures/FixtureOrderItems.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureOrderItems.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/Test/OrderServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Test/OrderServiceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/DBConnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/DBConnector.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/BasketItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/BasketItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/OrderItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/OrderItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/Fixtures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/Command" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -70,11 +75,11 @@
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Fixtures" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Command" />
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Fixtures" />
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Test" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\views" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Controller" />
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\common\src\Model" />
     </key>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
@@ -118,7 +123,7 @@
       <workItem from="1614757076522" duration="7544000" />
       <workItem from="1614833354730" duration="4023000" />
       <workItem from="1614839289480" duration="3986000" />
-      <workItem from="1614850449888" duration="4134000" />
+      <workItem from="1614850449888" duration="12210000" />
     </task>
     <servers />
   </component>

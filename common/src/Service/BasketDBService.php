@@ -39,20 +39,24 @@ class BasketDBService extends BasketService
         $item->save();
     }
 
-    public function getBasketProducts($basket_id)
+    public function getBasketProducts($basket_id, $testConn = null)
     {
+        if (!empty($testConn)) {
+            return (new BasketItem())->setConn($testConn)->getByBasketId($basket_id);
+        }
         return (new BasketItem())->getByBasketId($basket_id);
     }
 
-    public function clearBasket($basket_id)
+    public function clearBasket($basket_id, $testConn = null)
     {
-        (new BasketItem())->clearByBasketById($basket_id);
+        (new BasketItem())->setConn($testConn)->clearByBasketById($basket_id);
     }
 
-    public function getBasketIdByUserId($userId)
+    public function getBasketIdByUserId($userId, $testConn = null)
     {
+        if (!empty($testConn)) {
+            return 1;
+        }
         return (new Basket($userId))->getFromDB()['id'];
     }
-
-
 }

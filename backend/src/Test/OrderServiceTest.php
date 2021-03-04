@@ -41,15 +41,15 @@ class OrderServiceTest extends AbstractTest
             die('Test Was Crashed');
         }
 
-         $total = $orderService->calcTotal($quantityAndProducts);
+        $total = $orderService->calcTotal($quantityAndProducts);
 
-        if (0 !== $total) {
+        if (935 !== $total) {
             print "Error: calcTotal() is not correct" . PHP_EOL ;
             die('Test Was Crashed');
         }
 
-//        $this->dropTableByName('products');
-//        $this->dropTableByName('orders');
-//        $this->dropTableByName('order_item');
+        $this->dropTableByName('products');
+        $this->dropTableByName('orders');
+        $this->dropTableByName('order_item');
     }
 }

@@ -8,11 +8,11 @@ class FixtureOrderItems
 
 	private $data = 
 	[
-		[ 'id' => '1', 'order_id' => '1', 'product_id' => '1', 'quantity' => '1' ],
+		[ 'id' => '1', 'order_id' => '1', 'product_id' => '101', 'quantity' => '1' ],
 		[ 'id' => '2', 'order_id' => '1', 'product_id' => '1', 'quantity' => '4' ],
-		[ 'id' => '3', 'order_id' => '1', 'product_id' => '1', 'quantity' => '3' ],
+		[ 'id' => '3', 'order_id' => '1', 'product_id' => '103', 'quantity' => '3' ],
 		[ 'id' => '4', 'order_id' => '1', 'product_id' => '1', 'quantity' => '2' ],
-		[ 'id' => '5', 'order_id' => '1', 'product_id' => '1', 'quantity' => '5' ],
+		[ 'id' => '5', 'order_id' => '1', 'product_id' => '105', 'quantity' => '5' ],
 	];
 
 	public function __construct(DBConnector $conn)

@@ -20,6 +20,13 @@ class BasketItem
 		$this->quantity = $quantity;
 	}
 
+	public function setConn($testConn)
+    {
+        $this->conn = $testConn;
+
+        return $this;
+    }
+
 	public function save()
 	{
 		$query = "INSERT INTO basket_item VALUES (

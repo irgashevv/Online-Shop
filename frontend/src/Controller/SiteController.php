@@ -7,7 +7,6 @@ class SiteController
 {
 	public function index()
 	{
-
 		$all = (new Product())->all();
 		include_once __DIR__ . "/../../views/site/index.php";
 	}
@@ -16,5 +15,4 @@ class SiteController
     {
         include_once __DIR__ . "/../../views/site/login.php";
     }
-
 }

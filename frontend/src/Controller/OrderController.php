@@ -12,11 +12,17 @@ class OrderController
 {
     private $basketService;
 
-    public function __construct()
+    private $testConn;
+
+    public function __construct($testConn = null)
     {
         // TODO Check BasketService with OrderController
         $this->basketService = new BasketDBService();
 //        $this->basketService = new BasketCookieService();
+
+        if (!empty($testConn)) {
+            $this->testConn = $testConn;
+        }
     }
 
     public function index()
@@ -50,8 +56,12 @@ class OrderController
             $phone,
             $email,
             $status,
-            $updated
-        );
+            $updated);
+
+        if (!empty($this->testConn)) {
+            $order->setConn($this->testConn);
+        }
+
 
         $orderId = $order->save();
             if (empty($orderId))
@@ -59,20 +69,22 @@ class OrderController
                 throw new Exception("Order ID is null", 400);
             }
 
-        $basketId = $this->basketService->getBasketIdByUserId($userId);
-        $items = $this->basketService->getBasketProducts($basketId);
+        $basketId = $this->basketService->getBasketIdByUserId($userId, $this->testConn);
+        $items = $this->basketService->getBasketProducts($basketId, $this->testConn);
             if (empty($items))
             {
                 throw new Exception("Basket is Empty", 400);
             }
             foreach ($items as $item)
             {
+                /** @var  $orderItem $orderItem */
                 $orderItem = new OrderItem($orderId, (int)$item['product_id'], (int)$item['quantity']);
+                if (!empty($this->testConn)) { $orderItem->setConn($this->testConn); }
                 $orderItem->save();
             }
 
             // Clear Basket
-        $this->basketService->clearBasket($basketId);
+        $this->basketService->clearBasket($basketId, $this->testConn);
 
 
             header("location: /index.php?model=order&action=success&order_id=" . $orderId);
