@@ -1,6 +1,7 @@
 <?php
 	
 	include_once __DIR__ .'/../Service/DBConnector.php';
+	include_once __DIR__ .'/../Model/Product.php';
 
 class Order
 {
@@ -413,5 +414,29 @@ class Order
         $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         return reset($one);
+    }
+
+    public function getProductsAndOrderByOrderId($orderId)
+    {
+        $products = [];
+
+        $result = mysqli_query($this->conn, "SELECT
+                order_item.quantity,
+                products.*
+                FROM
+                order_item
+                LEFT JOIN products ON order_item.product_id = products.id
+                WHERE order_id = " . $orderId);
+
+        foreach (mysqli_fetch_all($result, MYSQLI_ASSOC) as $item) {
+            $products[] = [
+                'quantity' => $item['quantity'],
+                'product' => new Product($item['id'], $item['title'], $item['picture'],
+                    $item['preview'], $item['content'], $item['price'], $item['status'],
+                    $item['created'], $item['updated'])
+            ];
+        }
+
+        return $products;
     }
 }
