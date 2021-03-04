@@ -316,6 +316,22 @@ class Order
         $this->email = $email;
     }
 
+    /**
+     * @return false|mysqli
+     */
+    public function getConn()
+    {
+        return $this->conn;
+    }
+
+    /**
+     * @param false|mysqli $conn
+     */
+    public function setConn($conn)
+    {
+        $this->conn = $conn;
+    }
+
 
     /**
      * @throws Exception

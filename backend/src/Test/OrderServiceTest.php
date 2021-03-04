@@ -2,19 +2,23 @@
 
 include_once __DIR__ . '/../../../common/src/Service/OrderService.php';
 include_once __DIR__ . '/../../../common/src/Model/Order.php';
+include_once __DIR__ . '/../../../backend/src/Test/AbstractTest.php';
 
-class OrderServiceTest
+class OrderServiceTest extends AbstractTest
 {
-    public function __construct()
+    public function testCalcTotal()
     {
-        self::testCalcTotal();
-    }
+        $this->copyTableByName('products');
+        $this->copyTableByName('orders');
+        $this->copyTableByName('order_item');
 
-    public static function testCalcTotal()
-    {
         $orderService = new OrderService();
 
-        $quantityAndProducts = (new Order())->getProductsAndOrderByOrderId(75);
+        $orderObject = new Order();
+        $orderObject->setConn($this->conn);
+
+        $quantityAndProducts = $orderObject
+            ->getProductsAndOrderByOrderId(75);
 
         if (!method_exists($orderService, 'calcTotal')) {
             print "Error: calcTotal() is not exist" . PHP_EOL ;
