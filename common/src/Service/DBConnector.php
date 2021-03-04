@@ -1,5 +1,5 @@
 <?php 
-// ALTER USER 'shop_test_user'@'localhost' IDENTIFIED WITH mysql_native_password by 'shop_test_password'
+
 class DBConnector
 {
 	private $connect;
