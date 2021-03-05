@@ -20,10 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/Migrations/202103051935_migration_add_category_group.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/Service/CategoryService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Test/OrderControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Test/OrderControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/DeliveryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/PaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/category/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/category/form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/category/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/category/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/site/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/site/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/sidebar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,15 +70,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Command" />
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Migrations" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Fixtures" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Test" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\views" />
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\css" />
     </key>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
@@ -117,6 +124,8 @@
       <workItem from="1614839289480" duration="3986000" />
       <workItem from="1614850449888" duration="15680000" />
       <workItem from="1614873807185" duration="3358000" />
+      <workItem from="1614915549637" duration="2157000" />
+      <workItem from="1614954080480" duration="10149000" />
     </task>
     <servers />
   </component>
@@ -148,10 +157,10 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="413" y="150" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1366.728@0.40.1366.728" timestamp="1614693565769" />
-    <state x="310" y="126" key="NewPhpClassDialog" timestamp="1614839520569">
+    <state x="310" y="126" key="NewPhpClassDialog" timestamp="1614963075574">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="310" y="126" key="NewPhpClassDialog/0.40.1366.728@0.40.1366.728" timestamp="1614839520569" />
+    <state x="310" y="126" key="NewPhpClassDialog/0.40.1366.728@0.40.1366.728" timestamp="1614963075574" />
     <state x="518" y="327" key="NewPhpFileDialog" timestamp="1614698675499">
       <screen x="0" y="40" width="1366" height="728" />
     </state>

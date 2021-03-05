@@ -162,7 +162,6 @@
             </ul>
         </li>
 
-
         <li class="nav-item">
             <a href="/?model=permission&action=read" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
@@ -185,6 +184,62 @@
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             Permission List
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+            <a href="/?model=payment&action=read" class="nav-link">
+                <i class="nav-icon fas fa-table"></i>
+                <p>
+                    Payment
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="/?model=payment&action=create" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Create Payment
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/?model=payment&action=read" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Payment List
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+            <a href="/?model=delivery&action=read" class="nav-link">
+                <i class="nav-icon fas fa-table"></i>
+                <p>
+                    Delivery
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="/?model=delivery&action=create" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Create Delivery
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/?model=delivery&action=read" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Delivery List
                         </p>
                     </a>
                 </li>

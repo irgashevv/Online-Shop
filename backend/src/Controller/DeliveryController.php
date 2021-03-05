@@ -1,7 +1,7 @@
 <?php
 
 include_once __DIR__ . "/AbstractController.php";
-
+include_once  __DIR__ . "/../../../common/src/Model/Delivery.php";
 
 class DeliveryController extends AbstractController
 {

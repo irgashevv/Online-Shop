@@ -24,6 +24,7 @@
                         <th>Заголовок</th>
                         <th>Группа-ID</th>
                         <th>Родительский-ID</th>
+                        <th>Prior</th>
                         <th>Действия</th>
                     </thead>
 <?php foreach ($all as $c):?>
@@ -33,9 +34,10 @@
                             <td><?=$c['title']?></td>
                             <td><?=$c['groupId']?></td>
                             <td><?=$c['parentId']?></td>
+                            <td><?=$c['prior']?></td>
                             <td>
-                                <a href="/index.php?model=category&action=update&id=<?=$c['id']?>" class="btn btn-warning">Редактировать</a>
-                                <a href="/index.php?model=category&action=delete&id=<?=$c['id']?>" class="btn btn-danger">Удалить</a>
+                                <a href="/?model=category&action=update&id=<?=$c['id']?>" class="btn btn-warning">Редактировать</a>
+                                <a href="/?model=category&action=delete&id=<?=$c['id']?>" class="btn btn-danger">Удалить</a>
                             </td>
                         </tr>
 <?php endforeach; ?>

@@ -1,6 +1,7 @@
 <?php
 
     include_once __DIR__ . "/../../common/src/Service/UserService.php";
+    include_once __DIR__ . "/../../common/src/Service/CategoryService.php";
 
     $currentUser = UserService::getCurrentUser();
 ?>
@@ -66,7 +67,10 @@
 		</div>
 		<nav>
 			<ul  class="width1024 desktop-element">
-				<li><a href="#">Computers</a></li>
+                <?php foreach (CategoryService::getGenre() as $genre) :?>
+                    <li><a href="/?categoryId=<?=$genre['id']?>"><?=$genre['title']?></a></li>
+                <?php endforeach; ?>
+				<!--li><a href="#">Computers</a></li>
 				<li><a href="#">Cooking</a></li>
 				<li><a href="#">Educations</a></li>
 				<li><a href="#">Function</a></li>
@@ -74,7 +78,7 @@
 				<li><a href="#">Mathematics</a></li>
 				<li><a href="#">Medical</a></li>
 				<li><a href="#">Reference</a></li>
-				<li><a href="#">Science</a></li>
+				<li><a href="#">Science</a></li-->
 			</ul>
 			<select onchange="document.location=this.value" class="mobile-element">
 				<option disabled selected>

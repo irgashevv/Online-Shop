@@ -25,21 +25,17 @@
 				<li class="active"><a href="#">All</a></li>
 			</ul>
 		</div>
+        <?php foreach (CategoryService::getCategoriesForSidebar() as $group => $categories) : ?>
 		<div class="categories-group">
-			<h4>Fiction & literature</h4>
+			<h4><?=$group?>></h4>
 				<ul>
-					<li><a href="#">Children</a></li>
-					<li><a href="#">Science Fiction</a></li>
-					<li><a href="#">Fantasy</a></li>
-					<li><a href="#">Mystery</a></li>
-					<li><a href="#">Romance</a></li>
-					<li><a href="#">Horror</a></li>
-					<li><a href="#">Poetry</a></li>
-					<li><a href="#">Literature</a></li>
-					<li><a href="#">Crime</a></li>
-				</ul>
+        <?php foreach ($categories as $category) : ?>
+                    <li><a href="/category=<?=$category['id']?>"><?=$category['title']?></a></li>
+        <?endforeach;?>
+                </ul>
 		</div>
-		<div class="categories-group">
+        <?endforeach;?>
+		<!--div class="categories-group">
 			<h4>Non - Fiction</h4>
 				<ul>
 					<li><a href="#">Children</a></li>
@@ -59,6 +55,6 @@
 					<li><a href="#">Fantasy</a></li>
 					<li><a href="#">Mystery</a></li>
 				</ul>
-		</div>
+		</div-->
 	</div>
 </div>
