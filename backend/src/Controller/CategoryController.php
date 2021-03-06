@@ -17,8 +17,8 @@ class CategoryController extends AbstractController
                 $category = new Category(
                     (int)$_POST['id'],
                     htmlspecialchars($_POST['title']),
-                    htmlspecialchars($_POST['groupId']), 
-                    htmlspecialchars($_POST['parentId'])
+                    htmlspecialchars($_POST['group_id']),
+                    htmlspecialchars($_POST['parent_id'])
                     );
                 $category->save();
             }

@@ -4,8 +4,8 @@ class Category
 {
 	public $id;
 	public $title;
-	public $groupId;
-	public $parentId;
+	public $group_id;
+	public $parent_id;
 	public $prior;
 
 	private $conn;
@@ -13,16 +13,16 @@ class Category
 	public function __construct(
 		$id = null, 
 		$title = null, 
-		$groupId = null, 
-		$parentId = null,
+		$group_id = null,
+		$parent_id = null,
 		$prior = null) {
 
 		$this->conn = mysqli_connect("localhost", "shop_user", "shop_password", "db_shop");
 
 		$this->id = $id;
 		$this->title = $title;
-		$this->groupId = $groupId;
-		$this->parentId = $parentId;
+		$this->group_id = $group_id;
+		$this->parent_id = $parent_id;
 		$this->prior = $prior;
 	}
 	public function save()
@@ -31,8 +31,8 @@ class Category
 		{
 			$query = "UPDATE categories set 
 			`title` ='" . $this->title . "',
-			`groupId`= '" . $this->groupId . "',
-			`parentId` ='" . $this->parentId . "',
+			`group_id`= '" . $this->group_id . "',
+			`parentId` ='" . $this->parent_id . "',
 			`prior` = '". $this->prior . "'
 			where id=" . $this->id . " limit 1";
         } else
@@ -40,8 +40,8 @@ class Category
 		        $query = "INSERT INTO categories VALUES (
                 null,
 		        '" . $this->title . "',
-		        '" . $this->groupId . "',
-		        '" . $this->parentId . "',
+		        '" . $this->group_id . "',
+		        '" . $this->parent_id . "',
 		        '" . $this->prior . "')";
             }
 
@@ -53,15 +53,16 @@ class Category
 	    	return mysqli_fetch_all($result, MYSQLI_ASSOC);
 	    }
 
-	public function getWithoutGroupIds($groups = [])
+	public function getByGroupIds($groups = [])
         {
             $where = '';
             if (!empty($groups)) {
-                $where = ' Where groupId not in (' . implode(',', $groups) . ')';
+                $where = ' Where group_id in (' . implode(',', $groups) . ')';
             }
 
 	    	$result = mysqli_query($this->conn, "select * from categories $where order by id desc");
-	    	return mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+            return mysqli_fetch_all($result, MYSQLI_ASSOC);
 	    }
 
 
@@ -70,18 +71,17 @@ class Category
             $where = '';
 
             if (!empty($groups)) {
-                $where = ' Where groupId NOT in (' . implode(',', $groups) . ')';
+                $where = ' Where group_id NOT in (' . implode(',', $groups) . ')';
             }
 
 	    	$result = mysqli_query($this->conn,
                 "select 
-                    *,
-                    cg.id as groupId,
-                    cg.title as group_title,
-                    cg.title as group_title,
+                    categories.*,
+                    cg.id as group_id,
+                    cg.title as group_title
                     from 
                     categories 
-                    left join category_group cg on groupId = cg.id
+                    left join category_group cg on group_id = cg.id
                     $where order by `prior` desc"
             );
 
@@ -92,6 +92,7 @@ class Category
             if (!(is_array($categories) && !empty($categories))) {
                 return [];
             }
+
             foreach ($categories as $item) {
                 $groups[$item['group_title']][] = $item;
             }

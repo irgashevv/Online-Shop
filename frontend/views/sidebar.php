@@ -25,13 +25,14 @@
 				<li class="active"><a href="#">All</a></li>
 			</ul>
 		</div>
+
         <?php foreach (CategoryService::getCategoriesForSidebar() as $group => $categories) : ?>
 		<div class="categories-group">
-			<h4><?=$group?>></h4>
+			<h4><?=$group?></h4>
 				<ul>
-        <?php foreach ($categories as $category) : ?>
+               <?php foreach ($categories as $category) : ?>
                     <li><a href="/category=<?=$category['id']?>"><?=$category['title']?></a></li>
-        <?endforeach;?>
+            <?endforeach;?>
                 </ul>
 		</div>
         <?endforeach;?>

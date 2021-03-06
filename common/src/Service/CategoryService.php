@@ -8,8 +8,9 @@ class CategoryService
 
     public static function getGenre()
     {
-        return (new Category())->getGroupsWithCategories([self::GENRE_GROUP_ID]);
+        return (new Category())->getByGroupIds([self::GENRE_GROUP_ID]);
     }
+
     public static function getCategoriesForSidebar()
     {
         return (new Category())->getGroupsWithCategories([self::GENRE_GROUP_ID]);

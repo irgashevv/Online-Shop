@@ -31,7 +31,7 @@ class MigrationAddCategoryGroup {
 			print mysqli_error($this->conn) . PHP_EOL;
 		}
 
-        $result = mysqli_query($this->conn, "insert into `categories` (`title`, `groupId`, `parentId`, `prior`) 
+        $result = mysqli_query($this->conn, "insert into `categories` (`title`, `group_id`, `parent_id`, `prior`) 
         values 
         ('Комедия', '1', '0', '100'),
         ('Детектив', '1', '0', '90'),

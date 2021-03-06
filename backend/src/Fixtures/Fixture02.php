@@ -11,62 +11,62 @@ class Fixture02
 		[
 			'id' => 'null',
 			'title' => 'Яблоки',
-			'groupId' =>'1',
-			'parentId' =>'1'
+			'group_id' =>'1',
+			'parent_id' =>'1'
 		],
 		[
 			'id' => 'null',
 			'title' => 'Груши',
-			'groupId' =>'2',
-			'parentId' =>'2'
+			'group_id' =>'2',
+			'parent_id' =>'2'
 		],
 		[
 			'id' => 'null',
 			'title' => 'Винограды',
-			'groupId' =>'3',
-			'parentId' =>'3'
+			'group_id' =>'3',
+			'parent_id' =>'3'
 		],
 		[
 			'id' => 'null',
 			'title' => 'Лимоны',
-			'groupId' =>'4',
-			'parentId' =>'4'
+			'group_id' =>'4',
+			'parent_id' =>'4'
 		],
 		[
 			'id' => 'null',
 			'title' => 'Апельсины',
-			'groupId' =>'5',
-			'parentId' =>'5'
+			'group_id' =>'5',
+			'parent_id' =>'5'
 		],
 		[
 			'id' => 'null',
 			'title' => 'Яблоки',
-			'groupId' =>'1',
-			'parentId' =>'1'
+			'group_id' =>'1',
+			'parent_id' =>'1'
 		],
 		[
 			'id' => 'null',
 			'title' => 'Груши',
-			'groupId' =>'2',
-			'parentId' =>'2'
+			'group_id' =>'2',
+			'parent_id' =>'2'
 		],
 		[
 			'id' => 'null',
 			'title' => 'Винограды',
-			'groupId' =>'3',
-			'parentId' =>'3'
+			'group_id' =>'3',
+			'parent_id' =>'3'
 		],
 		[
 			'id' => 'null',
 			'title' => 'Лимоны',
-			'groupId' =>'4',
-			'parentId' =>'4'
+			'group_id' =>'4',
+			'parent_id' =>'4'
 		],
 		[
 			'id' => 'null',
 			'title' => 'Апельсины',
-			'groupId' =>'5',
-			'parentId' =>'5'
+			'group_id' =>'5',
+			'parent_id' =>'5'
 		],
 		
 	];
@@ -83,8 +83,8 @@ class Fixture02
 			$result = mysqli_query($this->conn, "INSERT INTO categories VALUES (
 				" . $product['id'] . ",
 				'" . $product['title'] . "',
-				'" . $product['groupId'] . "',
-				'" . $product['parentId'] . "')");
+				'" . $product['group_id'] . "',
+				'" . $product['parent_id'] . "')");
 					if (!$result)
 					{
 						print mysqli_error($this->conn) . PHP_EOL;

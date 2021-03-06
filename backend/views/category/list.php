@@ -32,8 +32,8 @@
                         <tr>
                             <td><?=$c['id']?></td>
                             <td><?=$c['title']?></td>
-                            <td><?=$c['groupId']?></td>
-                            <td><?=$c['parentId']?></td>
+                            <td><?=$c['group_id']?></td>
+                            <td><?=$c['parent_id']?></td>
                             <td><?=$c['prior']?></td>
                             <td>
                                 <a href="/?model=category&action=update&id=<?=$c['id']?>" class="btn btn-warning">Редактировать</a>
