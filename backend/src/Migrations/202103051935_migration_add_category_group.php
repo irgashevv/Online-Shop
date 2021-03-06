@@ -61,6 +61,16 @@ class MigrationAddCategoryGroup {
 		{
 			print mysqli_error($this->conn) . PHP_EOL;
 		}
+
+        $result = mysqli_query($this->conn, "CREATE TABLE category_product (
+                product_id int not null,
+                category_id int not null
+            )");
+
+        if (!$result)
+		{
+			print mysqli_error($this->conn) . PHP_EOL;
+		}
 	}
 	public function rollback()
 	{
@@ -71,6 +81,12 @@ class MigrationAddCategoryGroup {
 		}
 
 		$result = mysqli_query($this->conn, "truncate table categories ;");
+		if (!$result)
+		{
+			print mysqli_error($this->conn) . PHP_EOL;
+		}
+
+		$result = mysqli_query($this->conn, "drop table category_product ;");
 		if (!$result)
 		{
 			print mysqli_error($this->conn) . PHP_EOL;
