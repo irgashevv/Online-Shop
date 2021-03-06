@@ -31,7 +31,7 @@
 			<h4><?=$group?></h4>
 				<ul>
                <?php foreach ($categories as $category) : ?>
-                    <li><a href="/category=<?=$category['id']?>"><?=$category['title']?></a></li>
+                    <li><a href="/?model=product&action=all&category_id=<?=$category['id']?>"><?=$category['title']?></a></li>
             <?endforeach;?>
                 </ul>
 		</div>

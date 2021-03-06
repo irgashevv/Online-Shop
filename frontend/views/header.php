@@ -68,17 +68,8 @@
 		<nav>
 			<ul  class="width1024 desktop-element">
                 <?php foreach (CategoryService::getGenre() as $genre) :?>
-                    <li><a href="/?categoryId=<?=$genre['id']?>"><?=$genre['title']?></a></li>
+                    <li><a href="/?model=product&action=all&category_id=<?=$genre['id']?>"><?=$genre['title']?></a></li>
                 <?php endforeach; ?>
-				<!--li><a href="#">Computers</a></li>
-				<li><a href="#">Cooking</a></li>
-				<li><a href="#">Educations</a></li>
-				<li><a href="#">Function</a></li>
-				<li class="active"><a href="#">Health</a></li>
-				<li><a href="#">Mathematics</a></li>
-				<li><a href="#">Medical</a></li>
-				<li><a href="#">Reference</a></li>
-				<li><a href="#">Science</a></li-->
 			</ul>
 			<select onchange="document.location=this.value" class="mobile-element">
 				<option disabled selected>

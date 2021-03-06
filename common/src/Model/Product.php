@@ -70,9 +70,19 @@ class Product
 	$result = mysqli_query($this->conn, $query);
 	}
 
-	public function all()
+	public function all($categoryIds = [])
     {
-		$result = mysqli_query($this->conn, "select * from products order by id desc");
+        $where = !empty($categoryIds) ? ' WHERE cp.category_id IN (' . implode(',', $categoryIds) . ')' : '';
+
+        $query = "select 
+            products.* 
+            from 
+            products 
+            left join category_product cp on products.id = cp.product_id
+            $where
+            order by id desc";
+
+		$result = mysqli_query($this->conn, $query);
 		return mysqli_fetch_all($result, MYSQLI_ASSOC);
 	}
 

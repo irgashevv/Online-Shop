@@ -7,7 +7,12 @@ class ProductController
 {
 	public function all()
 	{
-		$all = (new Product())->all();
+	    $categories = isset($_GET['category_id'])
+            ?
+            explode(',', $_GET['category_id']) : [];
+
+		$all = (new Product())->all($categories);
+
 		include_once __DIR__ . "/../../views/product/list.php";
 	}
 

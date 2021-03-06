@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureCategoryProduct.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Migrations/202103051935_migration_add_category_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Migrations/202103051935_migration_add_category_group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/product/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/product/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/sidebar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +120,7 @@
       <workItem from="1614873807185" duration="3358000" />
       <workItem from="1614915549637" duration="2157000" />
       <workItem from="1614954080480" duration="10149000" />
-      <workItem from="1615007595371" duration="6831000" />
+      <workItem from="1615007595371" duration="11507000" />
     </task>
     <servers />
   </component>
