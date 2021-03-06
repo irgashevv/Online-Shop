@@ -1,7 +1,10 @@
 <?php 
 
-try {
+try
+{
 	
-} catch (Exception $e) {
+}
+catch (Exception $e)
+{
 	
 }
