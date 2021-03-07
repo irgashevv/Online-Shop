@@ -64,26 +64,28 @@
 						<div id="comments">
                             <h4>Comments</h4>
 							<div class="comments-list">
-
 							</div>
+
 							<form id="comment-form" action="#">
+                                <input type="hidden" name="product_id" value="<?=$_GET['id'] ?? ''?>">
 								<h4> Write a comment </h4>
 								<div>
-								<label> Your name </label>
-								<input type="text" name="username">
+								    <label> Your name </label>
+								    <input type="text" name="username" autocomplete="off">
 								</div>
 								<div>
-								<label> Email </label>
-								<input type="email" name="email">
+								    <label> Email </label>
+								    <input type="text" name="email">
 								</div>
 								<div>
-								<label> Message </label>
-								<textarea name="message"></textarea>
+								    <label> Message </label>
+								    <textarea name="message"></textarea>
 								</div>
 								<div>
-								<button> Submit </button>
+								    <button> Submit </button>
 								</div>
 							</form>
+
 						</div>
 					</div>
 					<div class="products-list column">

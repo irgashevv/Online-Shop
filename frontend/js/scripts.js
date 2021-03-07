@@ -1,6 +1,8 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function($)
+{
 	let widthSlide = $("#slider .slide").first().width();
-	$("#slider .banner-btn").click(function(){
+	$("#slider .banner-btn").click(function()
+	{
 	let obj = $(this);
 	let left = $("#slider .slides").first() .position().left || 0;
 	let coef = obj.hasClass('btn-left') ? -1 : 1;

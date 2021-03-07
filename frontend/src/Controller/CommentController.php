@@ -16,4 +16,30 @@ class CommentController
 	    print json_encode($all);
 	    die();
 	}
+
+	public function create()
+	{
+	    header("Content-Type: application/json");
+
+	    try {
+            $data = $_POST;
+
+            (new Comments(
+                null,
+                (int)$data['product_id'],
+                htmlspecialchars($data['username']),
+                htmlspecialchars($data['email']),
+                htmlspecialchars($data['avatar']),
+                htmlspecialchars($data['text'])
+            ))->save();
+
+            print json_encode([
+                'result' => 'OK'
+            ]);
+        }
+        catch (Exception $e) {
+            throw new Exception(json_encode(['result' => 'ERROR', 'message' => $e->getMessage()]), 400);
+        }
+	    die();
+	}
 }

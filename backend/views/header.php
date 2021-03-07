@@ -1,7 +1,5 @@
 <?php
-
     include_once __DIR__ . "/../../common/src/Service/SecurityService.php"
-
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PHP MVC</title>
+    <title>Administration Panel</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
@@ -30,8 +28,10 @@
         </a>
 
     <div class="sidebar">
-        <?php include_once __DIR__ . '/site/menu.php'; ?>?
+<?php
+    include_once __DIR__ . '/site/menu.php';
+?>
     </div>
     </aside>
 
-     <?php endif ;?>
+<?php endif ;?>

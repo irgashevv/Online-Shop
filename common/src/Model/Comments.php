@@ -1,5 +1,4 @@
 <?php
-	
 	include_once __DIR__ .'/../Service/DBConnector.php';
 
 class Comments
@@ -20,8 +19,9 @@ class Comments
 		$username = null,
 		$email = null,
 		$avatar = null,
-		$text = null,
-		$created = null) {
+		$text = null
+    )
+    {
 	
 		$this->conn = DBConnector::getInstance()->connect();
 		
@@ -34,32 +34,24 @@ class Comments
 		$this->created = date('Y-m-d H:i:s', time());
 	}
 
-
 	public function save()
     {
-//	    if ($this->id > 0)
-//	    {
-//	    	$query = "UPDATE news set
-//		    title='" . $this->title . "',
-//		    preview='" . $this->preview . "',
-//		    ". ((!empty($this->picture)) ? "picture='" . $this->picture . "'," : "")
-//		    . "content='". $this->content . "',
-//		    updated='" . $this->updated . "' where
-//		    id=" . $this->id . " limit 1";
-//        } else
-//            {
-//                $query = "INSERT INTO news VALUES (
-//                null,
-//		        '" . $this->title . "',
-//		        '" . $this->picture . "',
-//		        '" . $this->preview . "',
-//		        '" . $this->content . "',
-//		        '" . $this->created . "',
-//	        	'" . $this->updated . "')";
-//            }
-//	$result = mysqli_query($this->conn, $query);
-	}
+        $query = "INSERT into comments VALUES (
+            null,
+            '" . $this->product_id . "',
+            '" . $this->username . "',
+            '" . $this->email . "',
+            '" . $this->avatar . "',
+            '" . $this->text . "',
+            '" . $this->created . "'
+            )";
 
+	    	$result = mysqli_query($this->conn, $query);
+
+	    	if (!$result) {
+	    	    throw new Exception(mysqli_error($this->conn), 400);
+            }
+}
 	public function all()
     {
 		$result = mysqli_query($this->conn, "select * from comments order by id desc");
