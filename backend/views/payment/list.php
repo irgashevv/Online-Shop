@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Payment</h1>
+                    <h1>Список Оплаты</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item active">Payment</li>
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item active">Список Оплаты</li>
                     </ol>
                 </div>
             </div>
@@ -23,9 +23,9 @@
                 <table class="table table-striped projects">
                     <thead>
                         <th>ID</th>
-                        <th>Title</th>
-                        <th>Code</th>
-                        <th>Priority</th>
+                        <th>Оплата</th>
+                        <th>Код</th>
+                        <th>Приоритет</th>
                         <th>Действия</th>
                     </thead>
 <?php foreach ($all as $p):?>
@@ -36,8 +36,8 @@
                             <td><?=$p['code']?></td>
                             <td><?=$p['priority']?></td>
                             <td>
-                                <a href="/index.php?model=payment&action=update&id=<?=$p['id']?>" class="btn btn-warning">Редактировать</a>
-                                <a href="/index.php?model=payment&action=delete&id=<?=$p['id']?>" class="btn btn-danger">Удалить</a>
+                                <a href="/?model=payment&action=update&id=<?=$p['id']?>" class="btn btn-warning">Редактировать</a>
+                                <a href="/?model=payment&action=delete&id=<?=$p['id']?>" class="btn btn-danger">Удалить</a>
                             </td>
                         </tr>
 <?php endforeach; ?>

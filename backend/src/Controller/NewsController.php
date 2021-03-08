@@ -40,7 +40,7 @@
 		public function update()
 		{
 			$id = (int)$_GET['id'];
-			if (empty($id)) die('Undifined id');
+			if (empty($id)) die('Undefined id');
 
 			$one = (new News())->getById($id);
 			if (empty($one)) die('Product not found');

@@ -41,7 +41,7 @@
 		public function update()
 		{
 			$id = (int)$_GET['id'];
-			if (empty($id)) die('Undifined id');
+			if (empty($id)) die('Undefined id');
 
 			$one = (new Product())->getById($id);
 

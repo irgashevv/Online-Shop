@@ -7,12 +7,12 @@
 		<div class="container-fluid">
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<h1>ACCESS</h1>
+					<h1>Доступ</h1>
 				</div>
 		<div class="col-sm-6">
 			<ol class="breadcrumb float-sm-right">
-				<li class="breadcrumb-item"><a href="#">Домой</a></li>
-				<li class="breadcrumb-item active">ACCESS</li>
+				<li class="breadcrumb-item"><a href="/">Домой</a></li>
+				<li class="breadcrumb-item active">Доступ</li>
 			</ol>
 		</div>
 			</div>
@@ -46,7 +46,7 @@
                     </table>
 
 				<div class="form-group row">
-					<input type="submit" class="btn btn-dark" value="Save">
+					<input type="submit" class="btn btn-dark" value="Сохранить">
 				</div>
 				</div>
 			</form>

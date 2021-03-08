@@ -89,9 +89,7 @@ class OrderController
 
             // Clear Basket
         $this->basketService->clearBasket($basketId);
-
-
-            header("location: /index.php?model=order&action=success&order_id=" . $orderId);
+            header("location: /?model=order&action=success&order_id=" . $orderId);
     }
 
     public  function  success()

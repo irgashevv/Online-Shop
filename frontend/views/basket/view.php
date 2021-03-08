@@ -29,16 +29,16 @@
 					<tr>
 						<td><?=++$key?></td>
 						<td>
-							<a href="index.php?model=product&action=view&id=<?=$item['product_id']?>">
+							<a href="/?model=product&action=view&id=<?=$item['product_id']?>">
 								<img style="width: 150px; height: 200px;" src="http://localhost/shop/uploads/products/<?=$item['product']['picture']?>">
 							</a>
 						</td>
 						<td>
-							<a href="index.php?model=product&action=view&id=<?=$item['product_id']?>"><?=$item['product']['title']?>
+							<a href="/?model=product&action=view&id=<?=$item['product_id']?>"><?=$item['product']['title']?>
 							</a>
 						</td>
 						<td>
-							<form action="index.php?model=basket&action=change" method="post">
+							<form action="/?model=basket&action=change" method="post">
 								<input type="hidden" name="product_id" value="<?=$item['product']['id']?>">
 								<input type="text" name="qty" value="<?=$item['quantity']?>">
 								<input type="submit" value="change">
@@ -47,7 +47,7 @@
 						<td><?=$item['product']['price']?></td>
 						<td><?=$item['product']['sum']?></td>
 						<td>
-							<form action="index.php?model=basket&action=delete" method="post">
+							<form action="/?model=basket&action=delete" method="post">
 								<input type="hidden" name="product_id" value="<?=$item['product']['id']?>">
 								<button>Delete</button>
 							</form>
@@ -57,7 +57,7 @@
 				<tr><td colspan="6" class="total">Total:</td><td><?=$total?></td></tr>
 			</tbody>
 		</table>
-        <a href="/index.php?model=order&action=index" id="btn-create-order">Create Order</a>
+        <a href="/?model=order&action=index" id="btn-create-order">Create Order</a>
 
     </div>
     <?php endif ; ?>

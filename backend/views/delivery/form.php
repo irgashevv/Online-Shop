@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Create Delivery</h1>
+                        <h1>Добавить Доставку</h1>
                     </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Домой</a></li>
-                        <li class="breadcrumb-item active">Create Delivery</li>
+                        <li class="breadcrumb-item active">Добавить Доставку</li>
                     </ol>
                 </div>
                 </div>
@@ -26,28 +26,28 @@
                     <input type="hidden" value="<?=$one['id'] ?? ''?>" name="id">
 
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Title</label>
+                    <label class="col-sm-2 col-form-label">Доставка</label>
                 <div class="col-sm-10">
                     <input type="text" value="<?=$one['title'] ?? ''?>" name="title" class="form-control">
                 </div>
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Code</label>
+                    <label class="col-sm-2 col-form-label">Код</label>
                 <div class="col-sm-10">
                     <input type="text" value="<?=$one['code'] ?? ''?>" name="code"  class="form-control">
                 </div>
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Priority</label>
+                    <label class="col-sm-2 col-form-label">Приоритет</label>
                 <div class="col-sm-10">
                     <input type="number"  value="<?=$one['priority'] ?? ''?>" name="priority"  class="form-control">
                 </div>
                 </div>
 
                 <div>
-                    <input type="submit" class="btn btn-dark" value="Save">
+                    <input type="submit" class="btn btn-dark" value="Сохранить">
                 </div>
                 </div>
             </form>

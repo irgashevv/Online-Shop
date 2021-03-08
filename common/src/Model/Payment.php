@@ -108,7 +108,7 @@ class Payment
             $query = "UPDATE payment set 
 		    title='" . $this->title . "',
 		    code='" . $this->code . "',
-		    proirity='" . $this->priority . "' where 
+		    priority='" . $this->priority . "' where 
 		    id=" . $this->id . " limit 1";
         } else
         {

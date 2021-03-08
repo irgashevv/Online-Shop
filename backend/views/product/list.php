@@ -49,10 +49,12 @@
 </i>
 View
 </a-->
-                                <a class="btn btn-info btn-sm" href="/index.php?model=product&action=update&id=<?=$p['id']?>">
-                                    <i class="fas fa-pencil-alt"> </i> Edit </a>
-                                <a class="btn btn-danger btn-sm" href="/index.php?model=product&action=delete&id=<?=$p['id']?>">
-                                    <i class="fas fa-trash"> </i> Delete </a>
+                                <a class="btn btn-info btn-sm" href="/?model=product&action=update&id=<?=$p['id']?>">
+                                    <i class="fas fa-pencil-alt"> </i> Редактировать
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="/?model=product&action=delete&id=<?=$p['id']?>">
+                                    <i class="fas fa-trash"> </i> Удалить
+                                </a>
                             </td>
                         </tr>
 <?php endforeach; ?>

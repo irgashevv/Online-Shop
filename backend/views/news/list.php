@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
                         <li class="breadcrumb-item active">Новости</li>
                     </ol>
                 </div>
@@ -45,9 +45,9 @@
 </i>
 View
 </a-->
-                                <a class="btn btn-info btn-sm" href="/index.php?model=news&action=update&id=<?=$n['id']?>">
+                                <a class="btn btn-info btn-sm" href="/?model=news&action=update&id=<?=$n['id']?>">
                                     <i class="fas fa-pencil-alt"> </i> Редактировать </a>
-                                <a class="btn btn-danger btn-sm" href="/index.php?model=news&action=delete&id=<?=$n['id']?>">
+                                <a class="btn btn-danger btn-sm" href="/?model=news&action=delete&id=<?=$n['id']?>">
                                     <i class="fas fa-trash"> </i> Удалить </a>
                             </td>
                         </tr>

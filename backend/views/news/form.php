@@ -4,12 +4,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Добавить Новости</h1>
+                    <h1>Добавить Новость</h1>
                 </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Домой</a></li>
-                    <li class="breadcrumb-item active">Добавить Новости</li>
+                    <li class="breadcrumb-item"><a href="/">Домой</a></li>
+                    <li class="breadcrumb-item active">Добавить Новость</li>
                 </ol>
             </div>
             </div>
@@ -18,7 +18,7 @@
 </section>
 <section class="content">
         <div>
-            <form class="form-horizontal" action="/index.php?model=news&action=save" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="/?model=news&action=save" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                     <input type="hidden" value="<?=$one['id'] ?? ''?>" name="id">
                 <div class="form-group row">
@@ -49,7 +49,7 @@
                 </div>
                 </div>
                 <div>
-                    <input type="submit" class="btn btn-dark" value="Save">
+                    <input type="submit" class="btn btn-dark" value="Сохранить">
                 </div>
                 </div>
             </form>

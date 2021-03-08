@@ -13,17 +13,17 @@ class Order
     /**
      * @var mixed|null
      */
-    private $userId;
+    private $user_id;
 
     /**
      * @var int
      */
-    private $deliveryId;
+    private $delivery_id;
 
     /**
      * @var int
      */
-    private $paymentId;
+    private $payment_id;
 
     /**
      * @var int
@@ -76,9 +76,9 @@ class Order
     /**
      * Order constructor.
      * @param int|null $id
-     * @param int|null $userId
-     * @param int $deliveryId
-     * @param int $paymentId
+     * @param int|null $user_id
+     * @param int $delivery_id
+     * @param int $payment_id
      * @param int $status
      * @param int $updated
      * @param string $name
@@ -88,9 +88,9 @@ class Order
      */
 	public function __construct(
 	    $id = null,
-        $userId = null,
-        $paymentId = null,
-        $deliveryId = null,
+        $user_id = null,
+        $payment_id = null,
+        $delivery_id = null,
         $total = null,
         $comment = null,
         $name = null,
@@ -101,9 +101,9 @@ class Order
 	{
 		$this->conn = DBConnector::getInstance()->connect();
         $this->id = $id;
-        $this->userId = $userId;
-        $this->paymentId = $paymentId;
-        $this->deliveryId = $deliveryId;
+        $this->user_id = $user_id;
+        $this->payment_id = $payment_id;
+        $this->delivery_id = $delivery_id;
         $this->total = $total;
         $this->status = $status;
         $this->comment = $comment;
@@ -160,15 +160,15 @@ class Order
      */
     public function getUserId()
     {
-        return $this->userId;
+        return $this->user_id;
     }
 
     /**
-     * @param mixed|null $userId
+     * @param mixed|null $user_id
      */
-    public function setUserId($userId)
+    public function setUserId($user_id)
     {
-        $this->userId = $userId;
+        $this->user_id = $user_id;
     }
 
     /**
@@ -176,15 +176,15 @@ class Order
      */
     public function getDeliveryId(): int
     {
-        return $this->deliveryId;
+        return $this->delivery_id;
     }
 
     /**
-     * @param int $deliveryId
+     * @param int $delivery_id
      */
-    public function setDeliveryId(int $deliveryId)
+    public function setDeliveryId(int $delivery_id)
     {
-        $this->deliveryId = $deliveryId;
+        $this->delivery_id = $delivery_id;
     }
 
     /**
@@ -192,15 +192,15 @@ class Order
      */
     public function getPaymentId(): int
     {
-        return $this->paymentId;
+        return $this->payment_id;
     }
 
     /**
-     * @param int $paymentId
+     * @param int $payment_id
      */
-    public function setPaymentId(int $paymentId)
+    public function setPaymentId(int $payment_id)
     {
-        $this->paymentId = $paymentId;
+        $this->payment_id = $payment_id;
     }
 
     /**
@@ -341,32 +341,32 @@ class Order
      */
 	public function save()
 	{
-		$query = "INSERT INTO orders (
-                    id, 
-                    user_id, 
-                    status, 
-                    created, 
-                    updated, 
-                    delivery_id, 
-                    payment_id, 
-                    total, 
-                    comment, 
-                    name,
-                    email,
-                    phone) 
+		$query = "INSERT INTO `orders` (
+                    `id`, 
+                    `user_id`, 
+                    `total`, 
+                    `payment_id`, 
+                    `delivery_id`, 
+                    `comment`, 
+                    `name`, 
+                    `phone`, 
+                    `email`, 
+                    `status`,
+                    `created`,
+                    `updated`) 
         VALUES (
                 null,
-                '" . $this->userId . "' ,
-                '" . $this->status . "',
-                '" . $this->created . "',
-                '" . $this->updated . "',
-                '" . $this->deliveryId . "',
-                '" . $this->paymentId . "',
+                '" . $this->user_id . "' ,
                 '" . $this->total . "',
+                '" . $this->payment_id . "',
+                '" . $this->delivery_id . "',
                 '" . $this->comment . "',
                 '" . $this->name . "',
+                '" . $this->phone . "',
                 '" . $this->email . "',
-                '" . $this->phone . "'
+                '" . $this->status . "',
+                '" . $this->created . "',
+                '" . $this->updated . "'
                 )";
 
 		$result = mysqli_query($this->conn, $query);
@@ -389,14 +389,14 @@ class Order
 	public function update()
 	{
 		$query = "UPDATE orders SET  
-                status = '" . $this->status . "',
-                updated = '" . $this->updated . "',
-                delivery_id = '" . $this->deliveryId . "',
-                payment_id = '" . $this->paymentId . "',
-                total = '" . $this->total . "',
-                name = '" . $this->name . "',
-                email = '" . $this->email . "',
-                phone = '" . $this->phone . "'
+                `status` = '" . $this->status . "',
+                `updated` = '" . $this->updated . "',
+                `delivery_id` = '" . $this->delivery_id . "',
+                `payment_id` = '" . $this->payment_id . "',
+                `total` = '" . $this->total . "',
+                `name` = '" . $this->name . "',
+                `email` = '" . $this->email . "',
+                `phone` = '" . $this->phone . "'
                 where id = " . $this->id . " limit 1";
 
 		$result = mysqli_query($this->conn, $query);
@@ -411,7 +411,7 @@ class Order
 	public function getFromDB()
 	{
 		$result = mysqli_query($this->conn, "select * from orders where 
-            user_id = " . $this->userId . " limit 1");
+            user_id = " . $this->user_id . " limit 1");
 		$one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		return reset($one);
 	}
@@ -455,7 +455,6 @@ class Order
                     $item['created'], $item['updated'])
             ];
         }
-
         return $products;
     }
 }

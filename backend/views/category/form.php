@@ -11,7 +11,7 @@
                     </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Домой</a></li>
+                        <li class="breadcrumb-item"><a href="/">Домой</a></li>
                         <li class="breadcrumb-item active">Добавить Категорию</li>
                     </ol>
                 </div>
@@ -42,13 +42,13 @@
                 </div>
                 </div>
                     <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Prior</label>
+                    <label class="col-sm-2 col-form-label">Приоритет</label>
                 <div class="col-sm-10">
                     <input type="number"  value="<?=$one['prior'] ?? ''?>" name="prior"  class="form-control">
                 </div>
                 </div>
                 <div>
-                    <input type="submit" class="btn btn-dark" value="Save">
+                    <input type="submit" class="btn btn-dark" value="Сохранить">
                 </div>
                 </div>
             </form>

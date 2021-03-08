@@ -8,7 +8,7 @@
 				</div>
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
-						<li class="breadcrumb-item"><a href="#">Главная</a></li>
+						<li class="breadcrumb-item"><a href="/">Главная</a></li>
 						<li class="breadcrumb-item active">Магазины</li>
 					</ol>
 				</div>
@@ -32,8 +32,8 @@
 							<td><?=$sh['title']?></td>
 							<td><?=$sh['address']?></td>
 							<td>
-								<a href="/index.php?model=shop&action=update&id=<?=$sh['id']?>" class="btn btn-warning">Update</a>
-								<a href="/index.php?model=shop&action=delete&id=<?=$sh['id']?>" class="btn btn-danger">Delete</a>
+								<a href="/?model=shop&action=update&id=<?=$sh['id']?>" class="btn btn-warning">Редактировать</a>
+								<a href="/?model=shop&action=delete&id=<?=$sh['id']?>" class="btn btn-danger">Удалить</a>
 							</td>
 						</tr>
 		<?php endforeach; ?>

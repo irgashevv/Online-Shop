@@ -8,7 +8,7 @@
 				</div>
 		<div class="col-sm-6">
 			<ol class="breadcrumb float-sm-right">
-				<li class="breadcrumb-item"><a href="#">Домой</a></li>
+				<li class="breadcrumb-item"><a href="/">Домой</a></li>
 				<li class="breadcrumb-item active">Добавить Магазин</li>
 			</ol>
 		</div>
@@ -17,7 +17,7 @@
 	</section>
 	<section class="content">
 		<div>
-			<form class="form-horizontal" action="http://localhost/shop/backend/index.php?model=shop&action=save" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="?model=shop&action=save" method="post" enctype="multipart/form-data">
 				<div class="card-body">
 					<input type="hidden" value="<?=$one['id'] ?? ''?>" name="id">
 				<div class="form-group row">
@@ -33,7 +33,7 @@
 				</div>
 				</div>
 				<div>
-					<input type="submit" class="btn btn-dark" value="Save">
+					<input type="submit" class="btn btn-dark" value="Сохранить">
 				</div>
 				</div>
 			</form>

@@ -84,7 +84,7 @@ class BasketController
 
 	public function redirectToBasket()
 	{
-		header("location: /index.php?model=basket&action=view");
+		header("location: /?model=basket&action=view");
 	}
 
 }

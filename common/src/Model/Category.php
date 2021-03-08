@@ -32,7 +32,7 @@ class Category
 			$query = "UPDATE categories set 
 			`title` ='" . $this->title . "',
 			`group_id`= '" . $this->group_id . "',
-			`parentId` ='" . $this->parent_id . "',
+			`parent_id` ='" . $this->parent_id . "',
 			`prior` = '". $this->prior . "'
 			where id=" . $this->id . " limit 1";
         } else

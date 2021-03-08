@@ -15,7 +15,7 @@ abstract class AbstractController implements ControllerInterface
     {
         if (!SecurityService::isAuthorized())
         {
-            header("Location: /index.php?model=site&action=login");
+            header("Location: /?model=site&action=login");
             die();
         }
 

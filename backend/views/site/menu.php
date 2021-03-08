@@ -2,7 +2,7 @@
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
         <li class="nav-item">
-            <a href="/index.php?model=product&action=read" class="nav-link">
+            <a href="/?model=product&action=read" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
                     Товары
@@ -12,7 +12,7 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="/index.php?model=product&action=create" class="nav-link">
+                    <a href="/?model=product&action=create" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             Добавление Товара
@@ -20,7 +20,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/index.php?model=product&action=read" class="nav-link">
+                    <a href="/?model=product&action=read" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             Список Товаров
@@ -31,7 +31,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="/index.php?model=category&action=read" class="nav-link">
+            <a href="/?model=category&action=read" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
                     Категории
@@ -40,7 +40,7 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="/index.php?model=category&action=create" class="nav-link">
+                    <a href="/?model=category&action=create" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             Дабовление Категории
@@ -48,7 +48,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/index.php?model=category&action=read" class="nav-link">
+                    <a href="/?model=category&action=read" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             Список Категории
@@ -59,7 +59,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="/index.php?model=shop&action=read" class="nav-link">
+            <a href="/?model=shop&action=read" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
                     Магазины
@@ -68,7 +68,7 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="/index.php?model=shop&action=create" class="nav-link">
+                    <a href="/?model=shop&action=create" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             Дабовление Магазина
@@ -76,7 +76,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/index.php?model=shop&action=read" class="nav-link">
+                    <a href="/?model=shop&action=read" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             Список Магазинов
@@ -87,7 +87,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="/index.php?model=news&action=read" class="nav-link">
+            <a href="/?model=news&action=read" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
                     Новости
@@ -96,7 +96,7 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="/index.php?model=news&action=create" class="nav-link">
+                    <a href="/?model=news&action=create" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             Дабовление Новостей
@@ -104,7 +104,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/index.php?model=news&action=read" class="nav-link">
+                    <a href="/?model=news&action=read" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             Список Новостей
@@ -115,27 +115,27 @@
         </li>
 
         <li class="nav-item">
-            <a href="/index.php?model=order&action=read" class="nav-link">
+            <a href="/?model=order&action=read" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
-                    Orders
+                    Заказы
                     <i class="fas fa-angle-left right"></i>
                 </p>
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="/index.php?model=order&action=create" class="nav-link">
+                    <a href="/?model=order&action=create" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Create Orders
+                            Добавление Заказа
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/index.php?model=order&action=read" class="nav-link">
+                    <a href="/?model=order&action=read" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Order List
+                            Список Заказов
                         </p>
                     </a>
                 </li>
@@ -143,10 +143,10 @@
         </li>
 
         <li class="nav-item">
-            <a href="/index.php?model=access&action=update" class="nav-link">
+            <a href="/?model=access&action=update" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
-                    Access
+                    Доступ
                     <i class="fas fa-angle-left right"></i>
                 </p>
             </a>
@@ -155,7 +155,7 @@
                     <a href="/?model=access&action=update" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Manage Access
+                            Управление Доступом
                         </p>
                     </a>
                 </li>
@@ -166,7 +166,7 @@
             <a href="/?model=permission&action=read" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
-                    Permission
+                    Разрешение
                     <i class="fas fa-angle-left right"></i>
                 </p>
             </a>
@@ -175,7 +175,7 @@
                     <a href="/?model=permission&action=create" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Create Permission
+                            Добавить Разрешение
                         </p>
                     </a>
                 </li>
@@ -183,7 +183,7 @@
                     <a href="/?model=permission&action=read" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Permission List
+                            Список Разрешений
                         </p>
                     </a>
                 </li>
@@ -194,7 +194,7 @@
             <a href="/?model=payment&action=read" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
-                    Payment
+                    Оплата
                     <i class="fas fa-angle-left right"></i>
                 </p>
             </a>
@@ -203,7 +203,7 @@
                     <a href="/?model=payment&action=create" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Create Payment
+                            Добавить Оплату
                         </p>
                     </a>
                 </li>
@@ -211,7 +211,7 @@
                     <a href="/?model=payment&action=read" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Payment List
+                            Список Оплат
                         </p>
                     </a>
                 </li>
@@ -222,7 +222,7 @@
             <a href="/?model=delivery&action=read" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
-                    Delivery
+                    Доставка
                     <i class="fas fa-angle-left right"></i>
                 </p>
             </a>
@@ -231,7 +231,7 @@
                     <a href="/?model=delivery&action=create" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Create Delivery
+                            Добавить Доставку
                         </p>
                     </a>
                 </li>
@@ -239,7 +239,7 @@
                     <a href="/?model=delivery&action=read" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Delivery List
+                            Список Доставок
                         </p>
                     </a>
                 </li>

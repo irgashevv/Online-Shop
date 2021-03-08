@@ -6,7 +6,7 @@ class CategoryController extends AbstractController
     {
         public function all()
         {
-            $all = (new Deli())->all();
+            $all = (new Category())->all();
             include_once __DIR__ . "/../../views/product/list.php";
         }
 
@@ -17,8 +17,9 @@ class CategoryController extends AbstractController
                 $category = new Category(
                     (int)$_POST['id'],
                     htmlspecialchars($_POST['title']),
-                    htmlspecialchars($_POST['group_id']),
-                    htmlspecialchars($_POST['parent_id'])
+                    (int)$_POST['group_id'],
+                    (int)$_POST['parent_id'],
+                    (int)$_POST['prior']
                     );
                 $category->save();
             }

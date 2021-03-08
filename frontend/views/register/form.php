@@ -5,7 +5,7 @@
     <div id="login-container" class="width1024">
         <div><br><br><br><br></div>
         <h1>register</h1>
-            <form action="index.php?model=register&action=register" method="post">
+            <form action="/?model=register&action=register" method="post">
 
                 <div>
                     <label for="">Name: </label><input type="text" name="name">

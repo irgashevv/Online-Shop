@@ -34,7 +34,7 @@ class SecurityService
 
     public static function redirectToLoginPage()
     {
-        header("location: /index.php?model=site&action=login");
+        header("location: /?model=site&action=login");
         die();
     }
 

@@ -24,14 +24,14 @@
 						<li>
                             <?=!empty($currentUser['login'])
                             ? '<span style="color: #fff"> Hello, ' . $currentUser['login'] . '!</span>'
-                            : '<a href="/index.php?model=register&action=form">Register</a>'?>
+                            : '<a href="/?model=register&action=form">Register</a>'?>
                         </li>
                         <li>
                             <?=!empty($currentUser['login'])
-                        ? '<a href="/index.php?model=auth&action=logout">Sign Out</a>'
-                        : '<a href="/index.php?model=site&action=login">Sign in</a>'?>
+                        ? '<a href="/?model=auth&action=logout">Sign Out</a>'
+                        : '<a href="/?model=site&action=login">Sign in</a>'?>
                         </li>
-                        <?=!empty($currentUser['login']) ? '<li><a href="/index.php?model=basket&action=view">Basket</a></li>' : ''?>
+                        <?=!empty($currentUser['login']) ? '<li><a href="/?model=basket&action=view">Basket</a></li>' : ''?>
 
                         <li>
                             <a href="">
@@ -42,10 +42,10 @@
 					<div id="mobile-logo" class="mobile-element">BOOKS</div>
 				<select id="top-link" onchange="document.location=this.value" class="mobile-element">
 					<option disable selected></option>
-					<option value="/index.php?model=register&action=form">
+					<option value="/?model=register&action=form">
                         Register
                     </option>
-                    <option value="/index.php?model=site&action=login">
+                    <option value="/?model=site&action=login">
                         Sign in
                     </option>
                     <option value="#order">
@@ -60,7 +60,7 @@
 			<div class="header-panel">
 				<div class="width1024 flex">
 					<div id="logo">
-						<a href="/index.php">
+						<a href="/">
                             <img src="http://localhost/shop/frontend/imgs/logo.png" alt="">
                         </a>
 					</div>
