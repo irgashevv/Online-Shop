@@ -60,11 +60,6 @@ jQuery(document).ready(function($)
 			email: user.email,
 			avatar: user.avatar,
 			text: text
-			// product_id: product_id,
-			// username: user.username,
-			// email: user.email,
-			// avatar: user.avatar,
-			// text: text
 		};
 		console.log(comment);
 

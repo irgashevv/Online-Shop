@@ -27,11 +27,11 @@
 				<div class="pager">
 					<div class="link-to-begin"><a href="#"><<</a></div>
 					<div class="link-to-left"><a href="#"><</a></div>
-					<div class="link-pager"><a href="#">1</a></div>
-					<div class="link-pager"><a href="#">2</a></div>
-					<div class="link-pager current"><a href="#">3</a></div>
-					<div class="link-pager"><a href="#">4</a></div>
-					<div class="link-pager"><a href="#">5</a></div>
+					<div class="link-pager<?=intval($_GET['page'] ?? 0) === 1 ? ' current': ''?>"><a href="/?model=product&action=all<?=isset($_GET['category_id'])?'category_id='.$_GET['category_id'].'&':''?>&page=1">1</a></div>
+					<div class="link-pager<?=intval($_GET['page'] ?? 0) === 2 ? ' current': ''?>"><a href="/?model=product&action=all<?=isset($_GET['category_id'])?'category_id='.$_GET['category_id'].'&':''?>&page=2">2</a></div>
+					<div class="link-pager<?=intval($_GET['page'] ?? 0) === 3 ? ' current': ''?>"><a href="/?model=product&action=all<?=isset($_GET['category_id'])?'category_id='.$_GET['category_id'].'&':''?>&page=3">3</a></div>
+					<div class="link-pager<?=intval($_GET['page'] ?? 0) === 4 ? ' current': ''?>"><a href="/?model=product&action=all<?=isset($_GET['category_id'])?'category_id='.$_GET['category_id'].'&':''?>&page=4">4</a></div>
+					<div class="link-pager<?=intval($_GET['page'] ?? 0) === 5 ? ' current': ''?>"><a href="/?model=product&action=all<?=isset($_GET['category_id'])?'category_id='.$_GET['category_id'].'&':''?>&page=5">5</a></div>
 					<div class="link-to-right"><a href="#">></a></div>
 					<div class="link-end"><a href="#">>></a></div>
 				</div>

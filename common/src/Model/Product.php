@@ -4,6 +4,8 @@
 
 class Product
 {
+    const NUMBER_PRODUCTS_PER_PAGE = 20;
+
 	public $id;
 	public $title;
 	public $picture;
@@ -70,7 +72,7 @@ class Product
 	$result = mysqli_query($this->conn, $query);
 	}
 
-	public function all($categoryIds = [])
+	public function all($categoryIds = [], $limit = self::NUMBER_PRODUCTS_PER_PAGE, $offset = 0)
     {
         $where = !empty($categoryIds) ? ' WHERE cp.category_id IN (' . implode(',', $categoryIds) . ')' : '';
 
@@ -80,7 +82,7 @@ class Product
             products 
             left join category_product cp on products.id = cp.product_id
             $where
-            order by id desc";
+            order by id desc limit $offset, $limit";
 
 		$result = mysqli_query($this->conn, $query);
 		return mysqli_fetch_all($result, MYSQLI_ASSOC);
