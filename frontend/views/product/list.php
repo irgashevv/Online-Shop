@@ -24,16 +24,42 @@
 				</li>
 <?php endfor; ?>
 			</ul>
+            <?php
+            $allPageNumber = (new Product())->getNumberPage($_GET['category_id'] ?? [],
+                $_GET['limit'] ?? Product::NUMBER_PRODUCTS_PER_PAGE);
+            $currentPage = intval($_GET['page'] ?? 1);
+            $arNumbersPages = [];
+            $firstNumberPage = 1;
+            if ($currentPage >= 2) {
+                if ($currentPage > $allPageNumber - 2) {
+                    $arNumbersPages[] = $currentPage - 4;
+                }
+                if ($currentPage > $allPageNumber - 1) {
+                    $arNumbersPages[] = $currentPage - 3;
+                }
+                if ($currentPage >= 3) {
+                    $arNumbersPages[] = $currentPage-2;
+                }
+                $arNumbersPages[] = $currentPage-1;
+            }
+            $arNumbersPages[] = $currentPage;
+            for ($next=1; sizeof($arNumbersPages) < 5; $next++) {
+                $arNumbersPages[] = $currentPage + $next;
+            }
+            ?>
 				<div class="pager">
-					<div class="link-to-begin"><a href="#"><<</a></div>
-					<div class="link-to-left"><a href="#"><</a></div>
-					<div class="link-pager<?=intval($_GET['page'] ?? 0) === 1 ? ' current': ''?>"><a href="/?model=product&action=all<?=isset($_GET['category_id'])?'category_id='.$_GET['category_id'].'&':''?>&page=1">1</a></div>
-					<div class="link-pager<?=intval($_GET['page'] ?? 0) === 2 ? ' current': ''?>"><a href="/?model=product&action=all<?=isset($_GET['category_id'])?'category_id='.$_GET['category_id'].'&':''?>&page=2">2</a></div>
-					<div class="link-pager<?=intval($_GET['page'] ?? 0) === 3 ? ' current': ''?>"><a href="/?model=product&action=all<?=isset($_GET['category_id'])?'category_id='.$_GET['category_id'].'&':''?>&page=3">3</a></div>
-					<div class="link-pager<?=intval($_GET['page'] ?? 0) === 4 ? ' current': ''?>"><a href="/?model=product&action=all<?=isset($_GET['category_id'])?'category_id='.$_GET['category_id'].'&':''?>&page=4">4</a></div>
-					<div class="link-pager<?=intval($_GET['page'] ?? 0) === 5 ? ' current': ''?>"><a href="/?model=product&action=all<?=isset($_GET['category_id'])?'category_id='.$_GET['category_id'].'&':''?>&page=5">5</a></div>
-					<div class="link-to-right"><a href="#">></a></div>
-					<div class="link-end"><a href="#">>></a></div>
+                    <?php print '<div class="link-to-end"><a href="/?model=product&action=all' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '') . '&page=1"><<</a></div>'; ?>
+                    <?php print '<div class="link-to-left"><a href="/?model=product&action=all' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '')
+                        . '&page=' . ($currentPage - 1) . '"><</a></div>'; ?>
+                    <?php
+                    foreach ($arNumbersPages as $numbersPage) {
+                        print '<div class="link-pager' . (intval($_GET['page'] ?? 0) === $numbersPage ? ' current': '') . '"><a href="/?model=product&action=all' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '') . '&page=' . $numbersPage . '">' . $numbersPage . '</a></div>';
+                    }
+                    ?>
+                    <?php print '<div class="link-to-right"><a href="/?model=product&action=all' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '')
+                        . '&page=' . ($currentPage + 1) . '">></a></div>'; ?>
+                    <?php print '<div class="link-to-end"><a href="/?model=product&action=all' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '') . '&page=' . $allPageNumber . '">>></a></div>'; ?>
+
 				</div>
 		</div>
 	</div>

@@ -22,8 +22,6 @@
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/js/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/product/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/product/list.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +135,7 @@
       <workItem from="1614954080480" duration="10149000" />
       <workItem from="1615007595371" duration="22948000" />
       <workItem from="1615098530996" duration="23342000" />
-      <workItem from="1615186146008" duration="3989000" />
+      <workItem from="1615186146008" duration="8288000" />
     </task>
     <servers />
   </component>

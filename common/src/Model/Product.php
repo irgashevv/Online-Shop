@@ -88,6 +88,28 @@ class Product
 		return mysqli_fetch_all($result, MYSQLI_ASSOC);
 	}
 
+
+
+	public function getNumberPage($categoryIds = [], $limit = self::NUMBER_PRODUCTS_PER_PAGE, $offset = 0)
+    {
+        $where = !empty($categoryIds) ? ' WHERE cp.category_id IN (' . implode(',', $categoryIds) . ')' : '';
+
+        $query = "select 
+            count(*)
+            from 
+            products ";
+
+		$result = mysqli_query($this->conn, $query);
+
+		$result =  mysqli_fetch_all($result, MYSQLI_ASSOC);
+		$number = reset($result);
+		$number = reset($number);
+
+		return floor($number/Product::NUMBER_PRODUCTS_PER_PAGE);
+	}
+
+
+
 	public function getById($id)
     {
 		$result = mysqli_query($this->conn, "select * from products where id = $id ");
