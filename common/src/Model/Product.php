@@ -74,7 +74,9 @@ class Product
 
 	public function all($categoryIds = [], $limit = self::NUMBER_PRODUCTS_PER_PAGE, $offset = 0)
     {
-        $where = !empty($categoryIds) ? ' WHERE cp.category_id IN (' . implode(',', $categoryIds) . ')' : '';
+        $where = !empty($categoryIds) && is_array($categoryIds)
+            ?
+            ' WHERE cp.category_id IN (' . implode(',', $categoryIds) . ')' : '';
 
         $query = "select 
             products.* 
@@ -92,12 +94,13 @@ class Product
 
 	public function getNumberPage($categoryIds = [], $limit = self::NUMBER_PRODUCTS_PER_PAGE, $offset = 0)
     {
-        $where = !empty($categoryIds) ? ' WHERE cp.category_id IN (' . implode(',', $categoryIds) . ')' : '';
+        $where = (!empty($categoryIds) && is_array($categoryIds))
+            ? ' WHERE cp.category_id IN (' . implode(',', $categoryIds) . ')' : '';
 
         $query = "select 
             count(*)
             from 
-            products ";
+            products $where";
 
 		$result = mysqli_query($this->conn, $query);
 

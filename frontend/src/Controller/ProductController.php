@@ -7,7 +7,8 @@ class ProductController
 {
 	public function all()
 	{
-	    $categories = isset($_GET['category_id']) ? explode(',', $_GET['category_id']) : [];
+	    $categories = isset($_GET['category_id'])
+            && !empty($_GET['category_id']) ? explode(',', $_GET['category_id']) : [];
 
 	    $limit = intval($_GET['limit'] ?? Product::NUMBER_PRODUCTS_PER_PAGE);
 	    $offset = (intval($_GET['page'] ?? 1) - 1) * $limit;

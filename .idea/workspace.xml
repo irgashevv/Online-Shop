@@ -21,45 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/AbstractController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/AbstractController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/ShopController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/access/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/access/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/category/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/category/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/category/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/category/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/delivery/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/delivery/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/delivery/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/delivery/list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/news/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/news/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/news/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/news/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/orders/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/orders/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/orders/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/orders/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/payment/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/payment/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/payment/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/payment/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/permission/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/permission/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/permission/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/permission/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/product/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/product/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/product/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/product/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/shop/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/shop/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/shop/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/shop/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/site/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/site/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Delivery.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Delivery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/SecurityService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/SecurityService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/BasketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/Order/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/Order/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/basket/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/basket/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/product/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/product/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/product/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/product/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/register/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/register/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/Controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -173,6 +138,10 @@
       <workItem from="1615007595371" duration="22948000" />
       <workItem from="1615098530996" duration="23342000" />
       <workItem from="1615186146008" duration="13217000" />
+      <workItem from="1615272853581" duration="1253000" />
+      <workItem from="1615282803254" duration="3378000" />
+      <workItem from="1615352151234" duration="1229000" />
+      <workItem from="1615621166229" duration="2740000" />
     </task>
     <servers />
   </component>
@@ -268,10 +237,10 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="0" y="40" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.40.1366.728@0.40.1366.728" timestamp="1615118151408" />
-    <state x="390" y="139" width="585" height="582" key="find.popup" timestamp="1615198737816">
+    <state x="390" y="139" width="585" height="582" key="find.popup" timestamp="1615621194467">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="390" y="139" width="585" height="582" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1615198737816" />
+    <state x="390" y="139" width="585" height="582" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1615621194467" />
     <state x="339" y="182" key="run.anything.popup" timestamp="1615036690662">
       <screen x="0" y="40" width="1366" height="728" />
     </state>

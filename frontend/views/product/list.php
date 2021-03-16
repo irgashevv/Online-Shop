@@ -48,17 +48,22 @@
             }
             ?>
 				<div class="pager">
-                    <?php print '<div class="link-to-end"><a href="/?model=product&action=all' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '') . '&page=1"><<</a></div>'; ?>
-                    <?php print '<div class="link-to-left"><a href="/?model=product&action=all' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '')
+                    <?php print '<div class="link-to-end"><a href="/?model=product&action=all&'
+                        . (isset($_GET['category_id']) ?
+                            'category_id=' . $_GET['category_id']. '&' : '') . '&page=1"><<</a></div>'; ?>
+                    <?php print '<div class="link-to-left"><a href="/?model=product&action=all&' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '')
                         . '&page=' . ($currentPage - 1) . '"><</a></div>'; ?>
                     <?php
                     foreach ($arNumbersPages as $numbersPage) {
-                        print '<div class="link-pager' . (intval($_GET['page'] ?? 0) === $numbersPage ? ' current': '') . '"><a href="/?model=product&action=all' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '') . '&page=' . $numbersPage . '">' . $numbersPage . '</a></div>';
+                        print '<div class="link-pager' . (intval($_GET['page'] ?? 0) === $numbersPage ? ' current': '')
+                            . '"><a href="/?model=product&action=all&'
+                            . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '')
+                            . '&page=' . $numbersPage . '">' . $numbersPage . '</a></div>';
                     }
                     ?>
-                    <?php print '<div class="link-to-right"><a href="/?model=product&action=all' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '')
+                    <?php print '<div class="link-to-right"><a href="/?model=product&action=all&' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '')
                         . '&page=' . ($currentPage + 1) . '">></a></div>'; ?>
-                    <?php print '<div class="link-to-end"><a href="/?model=product&action=all' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '') . '&page=' . $allPageNumber . '">>></a></div>'; ?>
+                    <?php print '<div class="link-to-end"><a href="/?model=product&action=all&' . (isset($_GET['category_id'])? 'category_id='.$_GET['category_id']. '&' : '') . '&page=' . $allPageNumber . '">>></a></div>'; ?>
 
 				</div>
 		</div>
