@@ -17,6 +17,10 @@ class BasketController
 	public $items;
 	public $basketService;
 
+    /**
+     * BasketController constructor.
+     * @throws Exception
+     */
 	public function __construct() 
 	{
 		$this->user = UserService::getCurrentUser();
@@ -29,7 +33,7 @@ class BasketController
 		$this->basketService = new BasketDBService();
 //		    $this->basketService = new BasketSessionService();
 //          $this->basketService = new BasketCookieService();
-		$this->items = $this->basketService->getBasketProducts((int)$this->basket['id']);
+		$this->items = BasketDBService::defineBasketDetails();
 	}
 
 	public function addProduct()

@@ -1,8 +1,9 @@
 <?php
 	
 	include_once __DIR__ .'/../Service/DBConnector.php';
+	include_once __DIR__ .'/AbstractModel.php';
 
-class Product
+class Product extends AbstractModel
 {
     const NUMBER_PRODUCTS_PER_PAGE = 20;
 
@@ -16,8 +17,6 @@ class Product
 	public $created;
 	public $updated;
 
-	private $conn;
-
 	public function __construct(
 		$id = null, 
 		$title = null, 
@@ -27,10 +26,10 @@ class Product
 		$price = null, 
 		$status = null,
 		$created = null,
-		$updated = null) {
-	
-		$this->conn = DBConnector::getInstance()->connect();
-		
+		$updated = null)
+
+    {
+        parent::__construct();
 		$this->id = $id;
 		$this->title = $title;
 		$this->picture = $picture;
@@ -78,6 +77,15 @@ class Product
             ?
             ' WHERE cp.category_id IN (' . implode(',', $categoryIds) . ')' : '';
 
+//        $query = "select * from products where id in (select
+//            products.id
+//            from
+//            products
+//            left join category_product cp on products.id = cp.product_id
+//            $where)
+//            order by id desc limit $offset, $limit";
+
+
         $query = "select 
             products.* 
             from 
@@ -89,8 +97,6 @@ class Product
 		$result = mysqli_query($this->conn, $query);
 		return mysqli_fetch_all($result, MYSQLI_ASSOC);
 	}
-
-
 
 	public function getNumberPage($categoryIds = [], $limit = self::NUMBER_PRODUCTS_PER_PAGE, $offset = 0)
     {

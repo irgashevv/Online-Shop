@@ -17,4 +17,5 @@ abstract class BasketService implements BasketInterface
 	abstract public function clearBasket($basket_id);
 
 	abstract public function getBasketIdByUserId($basket_id);
+
 }

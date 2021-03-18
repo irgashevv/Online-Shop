@@ -20,10 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/src/Model/AbstractModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/Service/PagerService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/Basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Basket.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/BasketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/product/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/product/list.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,6 +147,7 @@
       <workItem from="1615282803254" duration="3378000" />
       <workItem from="1615352151234" duration="1229000" />
       <workItem from="1615621166229" duration="2740000" />
+      <workItem from="1616050094893" duration="10980000" />
     </task>
     <servers />
   </component>
@@ -225,26 +231,26 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.40.1366.728@0.40.1366.728" timestamp="1615118191651" />
-    <state x="310" y="126" key="NewPhpClassDialog" timestamp="1614963075574">
+    <state x="310" y="126" key="NewPhpClassDialog" timestamp="1616064823685">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="310" y="126" key="NewPhpClassDialog/0.40.1366.728@0.40.1366.728" timestamp="1614963075574" />
-    <state x="518" y="327" key="NewPhpFileDialog" timestamp="1614698675499">
+    <state x="310" y="126" key="NewPhpClassDialog/0.40.1366.728@0.40.1366.728" timestamp="1616064823685" />
+    <state x="518" y="327" key="NewPhpFileDialog" timestamp="1616058206399">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="518" y="327" key="NewPhpFileDialog/0.40.1366.728@0.40.1366.728" timestamp="1614698675499" />
+    <state x="518" y="327" key="NewPhpFileDialog/0.40.1366.728@0.40.1366.728" timestamp="1616058206399" />
     <state x="0" y="40" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1615118151408">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="0" y="40" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.40.1366.728@0.40.1366.728" timestamp="1615118151408" />
-    <state x="390" y="139" width="585" height="582" key="find.popup" timestamp="1615621194467">
+    <state x="390" y="139" width="585" height="582" key="find.popup" timestamp="1616070725163">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="390" y="139" width="585" height="582" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1615621194467" />
-    <state x="339" y="182" key="run.anything.popup" timestamp="1615036690662">
+    <state x="390" y="139" width="585" height="582" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1616070725163" />
+    <state x="339" y="182" key="run.anything.popup" timestamp="1616058373372">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="339" y="182" key="run.anything.popup/0.40.1366.728@0.40.1366.728" timestamp="1615036690662" />
+    <state x="339" y="182" key="run.anything.popup/0.40.1366.728@0.40.1366.728" timestamp="1616058373372" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1615036321759">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
