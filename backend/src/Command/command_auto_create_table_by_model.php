@@ -7,7 +7,7 @@ include_once __DIR__ . "/../../../common/src/Service/AnnotationHelper.php";
 $mysqlTypes =  [
     'int' => 'int',
     'float' => 'decimal (10, 2)',
-    'str' => 'varchar(255)'
+    'string' => 'varchar(255)'
 ];
 
 $reserveFields = ['id'];

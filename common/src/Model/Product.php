@@ -18,12 +18,26 @@ class Product extends AbstractModel
 	public $updated;
 
 	public function __construct(
-		$id = null, 
-		$title = null, 
-		$picture = null, 
-		$preview = null, 
-		$content = null, 
-		$price = null, 
+		$id = null,
+
+        /**
+         * @var string
+         * @valid("type": "string", "maxlength": 64)
+         */
+		$title = null,
+
+		$picture = null,
+
+        $preview = null,
+
+		$content = null,
+
+        /**
+         * @var int
+         * @valid ("type": "int", "max": 30000)
+         */
+        
+        $price = null,
 		$status = null,
 		$created = null,
 		$updated = null)
