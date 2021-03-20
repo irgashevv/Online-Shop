@@ -36,7 +36,6 @@ class ShopController extends AbstractController
 
 		if (empty($one)) die('Shop not found');
 		include_once __DIR__ . "/../../views/shop/form.php";
-
 	}
 
 	public function delete()

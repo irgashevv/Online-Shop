@@ -76,6 +76,7 @@ class BasketDBService extends BasketService
         $user = UserService::getCurrentUser();
 
         if (!isset($user['login'])){
+            return [];
             throw new Exception('No Permission',403 );
         }
 

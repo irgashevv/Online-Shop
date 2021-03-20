@@ -27,10 +27,12 @@ class DeliveryController extends AbstractController
         include_once __DIR__ . "/../../views/delivery/form.php";
 
     }
+
     public function delete()
     {
-        $id = (int) $_GET ['id'];
-        (new Delivery())->deleteById($id);
+        $id = (int)$_GET['id'];
+        if (empty($id)) die ('Undefined ID');
+        (new Product())->deleteById($id);
         return $this->read();
     }
 

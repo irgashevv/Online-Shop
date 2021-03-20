@@ -20,9 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/Service/ValidationService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/Service/MessageService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/Service/ProductValidator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dist/css/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/css/shop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/DeliveryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/ShopController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/product/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/product/form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/ValidationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/ValidationService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,21 +65,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/Command" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\common\src\Service" />
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Command" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\src\Controller" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\common\src\Model" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\js" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Fixtures" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\css" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.CommentController.php">
@@ -141,7 +150,10 @@
       <workItem from="1615352151234" duration="1229000" />
       <workItem from="1615621166229" duration="2740000" />
       <workItem from="1616050094893" duration="13679000" />
-      <workItem from="1616136843506" duration="10242000" />
+      <workItem from="1616136843506" duration="10609000" />
+      <workItem from="1616170293724" duration="5897000" />
+      <workItem from="1616180954787" duration="78000" />
+      <workItem from="1616218224774" duration="9985000" />
     </task>
     <servers />
   </component>
@@ -225,10 +237,10 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.40.1366.728@0.40.1366.728" timestamp="1615118191651" />
-    <state x="310" y="126" key="NewPhpClassDialog" timestamp="1616155123878">
+    <state x="310" y="126" key="NewPhpClassDialog" timestamp="1616223928400">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="310" y="126" key="NewPhpClassDialog/0.40.1366.728@0.40.1366.728" timestamp="1616155123878" />
+    <state x="310" y="126" key="NewPhpClassDialog/0.40.1366.728@0.40.1366.728" timestamp="1616223928400" />
     <state x="518" y="327" key="NewPhpFileDialog" timestamp="1616058206399">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
@@ -237,28 +249,17 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="0" y="40" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.40.1366.728@0.40.1366.728" timestamp="1615118151408" />
-    <state x="390" y="139" width="585" height="582" key="find.popup" timestamp="1616153920609">
+    <state x="390" y="139" width="585" height="620" key="find.popup" timestamp="1616177894883">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="390" y="139" width="585" height="582" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1616153920609" />
+    <state x="390" y="139" width="585" height="620" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1616177894883" />
     <state x="339" y="182" key="run.anything.popup" timestamp="1616058373372">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="339" y="182" key="run.anything.popup/0.40.1366.728@0.40.1366.728" timestamp="1616058373372" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1616147721126">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1616219516487">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.40.1366.728@0.40.1366.728" timestamp="1616147721126" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/backend/views/product/list.php</url>
-          <line>41</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.40.1366.728@0.40.1366.728" timestamp="1616219516487" />
   </component>
 </project>

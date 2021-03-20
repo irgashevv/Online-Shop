@@ -22,10 +22,14 @@ class Product extends AbstractModel
 
         /**
          * @var string
-         * @valid("type": "string", "maxlength": 64)
+         * @valid("type": "string", "maxlength": 32)
          */
 		$title = null,
 
+        /**
+         * @var string
+         * @valid("type": "string", "regx": "((.jpg)|(.png))$")
+         */
 		$picture = null,
 
         $preview = null,
@@ -34,7 +38,7 @@ class Product extends AbstractModel
 
         /**
          * @var int
-         * @valid ("type": "int", "max": 30000)
+         * @valid ("type": "int", "max": 30000, "min": 1)
          */
         
         $price = null,

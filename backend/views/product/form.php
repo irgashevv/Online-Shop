@@ -19,7 +19,12 @@
         </div>
     </section>
     <section class="content">
-        <div>
+        <div class="card-info">
+            <?php
+            $errorMessage = MessageService::displayError();
+            if (!empty($errorMessage)) :?>
+                <div class="error"><?=$errorMessage?></div>
+            <?php endif; ?>
             <form class="form-horizontal" action="/?model=product&action=save" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                     <input type="hidden" value="<?=$one['id'] ?? ''?>" name="id">
@@ -35,7 +40,7 @@
                     <input type="file" value="<?=$one['picture'] ?? ''?>" name="picture" class="form-control">
                 </div>
 <?php if (!empty($one['picture'])) { ?>
-                <img src="../../../uploads/products<?php print $one['picture'];?>" style="widows: 70px;">
+                <img src="../../../uploads/products<?php print $one['picture'];?>" style="width: 70px;">
 <?php } ?>
                 </div>
                 <div class="form-group row">
@@ -53,13 +58,13 @@
                 <div class="form-group row">
                     <label   class="col-sm-2 col-form-label">Цена</label>
                 <div class="col-sm-10">
-                    <input type="number" value="<?=$one['price'] ?? ''?>" name="price" class="form-control">
+                    <input type="text" value="<?=$one['price'] ?? ''?>" name="price" class="form-control">
                 </div>
                 </div>
                 <div class="form-group row">
                     <label   class="col-sm-2 col-form-label">Статус</label>
                 <div class="col-sm-10">
-                    <input type="number" value="<?=$one['status'] ?? ''?>" name="status" class="form-control">
+                    <input type="text" value="<?=$one['status'] ?? ''?>" name="status" class="form-control">
                 </div>
                 </div>
                 <div>
@@ -67,6 +72,7 @@
                 </div>
                 </div>
             </form>
+        </div>
         </div>
     </section>
 </div>
