@@ -20,17 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/Service/MessageService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/Service/ProductValidator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/dist/css/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/css/shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/DeliveryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/ShopController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/product/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/product/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/ValidationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/ValidationService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/ProductValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/ProductValidator.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +144,7 @@
       <workItem from="1616136843506" duration="10609000" />
       <workItem from="1616170293724" duration="5897000" />
       <workItem from="1616180954787" duration="78000" />
-      <workItem from="1616218224774" duration="9985000" />
+      <workItem from="1616218224774" duration="13906000" />
     </task>
     <servers />
   </component>

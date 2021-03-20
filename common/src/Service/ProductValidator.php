@@ -9,7 +9,7 @@ class ProductValidator
         $properties = $reflObj->getProperties();
 
         foreach ($properties as $property) {
-            $comment = $property->getDocComment();
+            $comment = $property->getValue();
 
             if (!empty($comment) && isset($_POST[$property->getName()])){
                 if (!ValidationService::validate($comment, $_POST[$property->getName()])) {
@@ -17,6 +17,7 @@ class ProductValidator
                 }
             }
         }
+
         return true;
     }
 }
