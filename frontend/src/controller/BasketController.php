@@ -1,6 +1,5 @@
 <?php 
 
-
 include_once __DIR__ . "/../../../common/src/service/BasketService.php";
 include_once __DIR__ . "/../../../common/src/service/BasketSessionService.php";
 include_once __DIR__ . "/../../../common/src/service/BasketDBService.php";
@@ -24,11 +23,9 @@ class BasketController
 	public function __construct() 
 	{
 		$this->user = UserService::getCurrentUser();
-
 		if (!isset($this->user['login'])){
 		    throw new Exception('No Permission',403 );
         }
-
 		$this->basket = BasketDBService::getBasketByUserId($this->user['id']);
 		$this->basketService = new BasketDBService();
 //		    $this->basketService = new BasketSessionService();
@@ -40,7 +37,6 @@ class BasketController
 	{
 		$product_id = (int)$_POST['product_id'];
 		$qty = (int)$_POST['quantity'];
-
 		if (empty($product_id) || empty($qty))
 		{
 			throw new Exception("Empty product");
@@ -49,14 +45,11 @@ class BasketController
 		foreach ($this->items as $item) {
 			if ($item['product_id'] == $product_id)
 			{
-
 				$this->basketService->updateBasketItem($this->basket['id'], $product_id, $qty);
-
 				$this->redirectToBasket();
 				die();
 			}
 		}
-
 		$this->basketService->createBasketItem($this->basket['id'], $product_id, $qty);
 		$this->redirectToBasket();
 	}
@@ -66,14 +59,12 @@ class BasketController
 		$result = (new ProductService())->getBasketItems($this->items);
 		$items = $result['items'];
 		$total = $result['total'];
-
 		include_once __DIR__ . "/../../views/basket/view.php";
 	}
 
 	public function delete()
 	{
 		$this->basketService->deleteBasketItem((int)$this->basket['id'], (int)$_POST['product_id']);
-
 		$this->redirectToBasket();
 	}
 	
@@ -90,6 +81,5 @@ class BasketController
 	{
 		header("location: /?model=basket&action=view");
 	}
-
 }
 

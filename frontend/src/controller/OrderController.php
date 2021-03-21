@@ -15,8 +15,6 @@ class OrderController
 
     public function __construct($conn = null)
     {
-        // TODO Check BasketService with OrderController
-
 //        $this->basketService = new BasketCookieService();
 
         if (!empty($conn)) {
@@ -36,9 +34,7 @@ class OrderController
     public function create()
     {
         $name = htmlspecialchars($_POST['name']);
-        // TODO Validation Phone
         $phone = htmlspecialchars($_POST['phone']);
-        // TODO Validation Email
         $email = htmlspecialchars($_POST['email']);
         $delivery = (int)$_POST['delivery_id'];
         $payment = (int)$_POST['payment_id'];

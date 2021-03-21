@@ -42,7 +42,7 @@ class PaymentController extends AbstractController
                 (int)$_POST['id'],
                 htmlspecialchars($_POST['title']),
                 htmlspecialchars($_POST['code']),
-                htmlspecialchars($_POST['priority'])
+                intval($_POST['priority'])
             );
             $delivery->save();
         }
