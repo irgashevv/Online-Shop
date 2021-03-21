@@ -36,8 +36,12 @@
                             <td><?=$c['parent_id']?></td>
                             <td><?=$c['prior']?></td>
                             <td>
-                                <a href="/?model=category&action=update&id=<?=$c['id']?>" class="btn btn-warning">Редактировать</a>
-                                <a href="/?model=category&action=delete&id=<?=$c['id']?>" class="btn btn-danger">Удалить</a>
+                                <a href="/?model=category&action=update&id=<?=$c['id']?>"
+                                   class="btn btn-warning">Редактировать
+                                </a>
+                                <a href="/?model=category&action=delete&id=<?=$c['id']?>"
+                                   class="btn btn-danger">Удалить
+                                </a>
                             </td>
                         </tr>
 <?php endforeach; ?>

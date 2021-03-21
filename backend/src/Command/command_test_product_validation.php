@@ -1,8 +1,8 @@
 <?php
 
-include_once __DIR__ . "/../../../common/src/Model/Product.php";
-include_once __DIR__ . "/../../../common/src/Service/AnnotationHelper.php";
-include_once __DIR__ . "/../../../common/src/Service/ValidationService.php";
+include_once __DIR__ . "/../../../common/src/model/Product.php";
+include_once __DIR__ . "/../../../common/src/service/AnnotationHelper.php";
+include_once __DIR__ . "/../../../common/src/service/ValidationService.php";
 
 $objReflection = new ReflectionClass('Product');
 $properties = $objReflection->getProperties();

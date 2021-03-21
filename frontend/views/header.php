@@ -1,8 +1,8 @@
 <?php
-include_once __DIR__ . "/../../common/src/Service/UserService.php";
-include_once __DIR__ . "/../../common/src/Service/CategoryService.php";
-include_once __DIR__ . "/../../common/src/Service/BasketDBService.php";
-include_once __DIR__ . "/../../common/src/Service/ProductService.php";
+include_once __DIR__ . "/../../common/src/service/UserService.php";
+include_once __DIR__ . "/../../common/src/service/CategoryService.php";
+include_once __DIR__ . "/../../common/src/service/BasketDBService.php";
+include_once __DIR__ . "/../../common/src/service/ProductService.php";
 
 $currentUser = UserService::getCurrentUser();
 $basketDetails = (new ProductService())->getBasketItems(BasketDBService::defineBasketDetails());
@@ -96,24 +96,15 @@ $basketDetails = (new ProductService())->getBasketItems(BasketDBService::defineB
 			</ul>
 			<select onchange="document.location=this.value" class="mobile-element">
 				<option disabled selected>
-				<option value="#Computers">
-                    Computers
-				<option value="#Cooking">
-                    Cooking
-				<option value="#">
-                    Educations
-				<option value="#">
-                    Functions
-				<option value="#">
-                    Health
-				<option value="#">
-                    Mathematics
-				<option value="#">
-                    Medical
-				<option value="#">
-                    Reference
-				<option value="#">
-                    Science
+				<option value="#Computers">Computers
+				<option value="#Cooking">Cooking
+				<option value="#">Educations
+				<option value="#">Functions
+				<option value="#">Health
+				<option value="#">Mathematics
+				<option value="#">Medical
+				<option value="#">Reference
+				<option value="#">Science
 			</select>
 		</nav>
 	</header>

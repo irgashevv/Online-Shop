@@ -1,6 +1,6 @@
 <?php
     include_once __DIR__ . "/../header.php";
-    include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
+    include_once __DIR__ . "/../../../common/src/service/PagerService.php";
 ?>
 
 <div id="content" class="width1024">

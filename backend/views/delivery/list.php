@@ -36,8 +36,12 @@
                             <td><?=$d['code']?></td>
                             <td><?=$d['priority']?></td>
                             <td>
-                                <a href="/?model=delivery&action=update&id=<?=$d['id']?>" class="btn btn-warning">Редактировать</a>
-                                <a href="/?model=delivery&action=delete&id=<?=$d['id']?>" class="btn btn-danger">Удалить</a>
+                                <a href="/?model=delivery&action=update&id=<?=$d['id']?>"
+                                   class="btn btn-warning">Редактировать
+                                </a>
+                                <a href="/?model=delivery&action=delete&id=<?=$d['id']?>"
+                                   class="btn btn-danger">Удалить
+                                </a>
                             </td>
                         </tr>
 <?php endforeach; ?>

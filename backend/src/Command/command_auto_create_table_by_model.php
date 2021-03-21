@@ -1,8 +1,8 @@
 <?php
 
-include_once __DIR__ . "/../../../common/src/Model/Rating.php";
-include_once __DIR__ . "/../../../common/src/Service/DBConnector.php";
-include_once __DIR__ . "/../../../common/src/Service/AnnotationHelper.php";
+include_once __DIR__ . "/../../../common/src/model/Rating.php";
+include_once __DIR__ . "/../../../common/src/service/DBConnector.php";
+include_once __DIR__ . "/../../../common/src/service/AnnotationHelper.php";
 
 $mysqlTypes =  [
     'int' => 'int',

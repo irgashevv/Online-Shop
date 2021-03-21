@@ -16,7 +16,7 @@
 			<div id="product">
 				<div class="columns">
 					<div class="column">
-						<img style="width: 256px; height: 397px;" src="http://localhost/shop/uploads/products/<?=$product['picture']?>" alt="">
+						<img style="width: 256px; height: 397px;" src="http://localhost/shop/uploads/products/<?=$product['picture']?>">
 					</div>
 					<div class="column">
 						<h1><?=$product['title']?></h1>

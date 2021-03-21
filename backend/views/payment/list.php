@@ -36,8 +36,12 @@
                             <td><?=$p['code']?></td>
                             <td><?=$p['priority']?></td>
                             <td>
-                                <a href="/?model=payment&action=update&id=<?=$p['id']?>" class="btn btn-warning">Редактировать</a>
-                                <a href="/?model=payment&action=delete&id=<?=$p['id']?>" class="btn btn-danger">Удалить</a>
+                                <a href="/?model=payment&action=update&id=<?=$p['id']?>"
+                                   class="btn btn-warning">Редактировать
+                                </a>
+                                <a href="/?model=payment&action=delete&id=<?=$p['id']?>"
+                                   class="btn btn-danger">Удалить
+                                </a>
                             </td>
                         </tr>
 <?php endforeach; ?>

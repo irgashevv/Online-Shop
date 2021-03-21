@@ -30,11 +30,13 @@
 						<td><?=++$key?></td>
 						<td>
 							<a href="/?model=product&action=view&id=<?=$item['product_id']?>">
-								<img style="width: 150px; height: 200px;" src="http://localhost/shop/uploads/products/<?=$item['product']['picture']?>">
+								<img style="width: 150px; height: 200px;"
+                                     src="http://localhost/shop/uploads/products/<?=$item['product']['picture']?>">
 							</a>
 						</td>
 						<td>
-							<a href="/?model=product&action=view&id=<?=$item['product_id']?>"><?=$item['product']['title']?>
+							<a href="/?model=product&action=view&id=<?=$item['product_id']?>">
+                                <?=$item['product']['title']?>
 							</a>
 						</td>
 						<td>

@@ -7,35 +7,17 @@
 					<option value="#Children">
                         Children
                     </option>
-					<option value="#Science Fiction">
-                        Science Fiction
-                    </option>
-					<option value="#Fantasy">
-                        Fantasy
-                    </option>
-					<option value="#Mystery">
-                        Mystery
-                    </option>
-					<option value="#">
-                        Romance
-                    </option>
+					<option value="#Science Fiction">Science Fiction</option>
+					<option value="#Fantasy">Fantasy</option>
+					<option value="#Mystery">Mystery</option>
+					<option value="#">Romance</option>
 			</optgroup>
 			<optgroup label="Non - Fiction">
-					<option value="#Children">
-                        Children
-                    </option>
-					<option value="#Science Fiction">
-                        Science Fiction
-                    </option>
-					<option value="#Fantasy">
-                        Fantasy
-                    </option>
-					<option value="#">
-                        Mystery
-                    </option>
-					<option value="#">
-                        Romance
-                    </option>
+					<option value="#Children">Children</option>
+					<option value="#Science Fiction">Science Fiction</option>
+					<option value="#Fantasy">Fantasy</option>
+					<option value="#">Mystery</option>
+					<option value="#">Romance</option>
 			</optgroup>
 		</select>
 	</div>

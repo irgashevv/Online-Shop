@@ -40,11 +40,6 @@
                             <td><?=$n['created']?></td>
                             <td><?=$n['updated']?></td>
                             <td>
-<!--a class="btn btn-primary btn-sm" href="#">
-<i class="fas fa-folder">
-</i>
-View
-</a-->
                                 <a class="btn btn-info btn-sm" href="/?model=news&action=update&id=<?=$n['id']?>">
                                     <i class="fas fa-pencil-alt"> </i> Редактировать </a>
                                 <a class="btn btn-danger btn-sm" href="/?model=news&action=delete&id=<?=$n['id']?>">

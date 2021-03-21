@@ -32,8 +32,12 @@
 							<td><?=$sh['title']?></td>
 							<td><?=$sh['address']?></td>
 							<td>
-								<a href="/?model=shop&action=update&id=<?=$sh['id']?>" class="btn btn-warning">Редактировать</a>
-								<a href="/?model=shop&action=delete&id=<?=$sh['id']?>" class="btn btn-danger">Удалить</a>
+								<a href="/?model=shop&action=update&id=<?=$sh['id']?>"
+                                   class="btn btn-warning">Редактировать
+                                </a>
+								<a href="/?model=shop&action=delete&id=<?=$sh['id']?>"
+                                   class="btn btn-danger">Удалить
+                                </a>
 							</td>
 						</tr>
 		<?php endforeach; ?>

@@ -21,7 +21,7 @@
     <section class="content">
 
         <div>
-            <form class="form-horizontal" action="/?model=payment&action=save" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="/?model=payment&action=save" method="post">
                 <div class="card-body">
                     <input type="hidden" value="<?=$one['id'] ?? ''?>" name="id">
 

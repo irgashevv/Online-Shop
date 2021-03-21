@@ -28,7 +28,8 @@
                         <tr>
                             <td><?=$p?></td>
                             <td>
-                                <a class="btn btn-danger btn-sm" href="/?model=permission&action=delete&permission=<?=$p?>">
+                                <a class="btn btn-danger btn-sm"
+                                   href="/?model=permission&action=delete&permission=<?=$p?>">
                                     <i class="fas fa-trash"> </i> Удалить </a>
                             </td>
                         </tr>

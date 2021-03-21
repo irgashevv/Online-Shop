@@ -1,6 +1,6 @@
 <?php 
 
-include_once __DIR__ . "/../../../backend/src/Test/OrderServiceTest.php";
+include_once __DIR__ . "/../../../backend/src/test/OrderServiceTest.php";
 
 $test = new OrderServiceTest();
 

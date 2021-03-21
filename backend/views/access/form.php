@@ -20,7 +20,7 @@
 	</section>
 	<section class="content">
 		<div>
-			<form class="form-horizontal" action="/?model=access&action=save" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="/?model=access&action=save" method="post">
 				<div class="card-body">
                     <table id="access-table">
                         <thead>
