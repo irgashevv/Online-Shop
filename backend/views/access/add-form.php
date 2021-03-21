@@ -7,26 +7,25 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Добавить Разрешение</h1>
+                    <h1>Добавить Роль</h1>
                 </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="/">Домой</a></li>
-                    <li class="breadcrumb-item active">Добавить Разрешение</li>
+                    <li class="breadcrumb-item active">Добавить Роль</li>
                 </ol>
             </div>
             </div>
         </div>
-<!-- /.container-fluid -->
 </section>
 <section class="content">
         <div>
-            <form class="form-horizontal" action="/?model=permission&action=save" method="post">
+            <form class="form-horizontal" action="/?model=access&action=saveAccess" method="post">
                 <div class="card-body">
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Разрешение:</label>
+                    <label class="col-sm-2 col-form-label">Роль:</label>
                 <div class="col-sm-10">
-                    <input type="text" value="<?=$one['title'] ?? ''?>" name="permission" class="form-control">
+                    <input type="text" value="<?=$one['title'] ?? ''?>" name="access" class="form-control">
                 </div>
                 </div>
                 <div>

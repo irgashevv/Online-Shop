@@ -5,13 +5,11 @@ include_once __DIR__ . '/../service/DBConnector.php';
 class Permission
 {
 	public $permission;
-
 	private $conn;
 
 	public function __construct($permission = null)
     {
 		$this->conn = DBConnector::getInstance()->connect();
-
 		$this->permission = $permission;
 	}
 

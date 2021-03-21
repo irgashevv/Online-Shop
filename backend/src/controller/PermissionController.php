@@ -12,8 +12,7 @@
 		{
 			if (!empty($_POST))
 			{
-				$news = new Permission(htmlspecialchars($_POST['permission'])
-					);
+				$news = new Permission(htmlspecialchars($_POST['permission']));
 				$news->save();
 			}
 			return $this->read();

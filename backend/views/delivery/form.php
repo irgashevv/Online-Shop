@@ -47,7 +47,7 @@
                 </div>
 
                 <div>
-                    <input type="submit" class="btn btn-dark" value="Сохранить">
+                    <input type="submit" class="btn btn-info" value="Сохранить">
                 </div>
                 </div>
             </form>

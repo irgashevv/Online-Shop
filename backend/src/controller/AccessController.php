@@ -7,14 +7,22 @@
 
 	class AccessController extends AbstractController
 	{
+	    public  function saveAccess()
+        {
+            if (!empty($_POST))
+            {
+                $news = new Access(htmlspecialchars($_POST['access']));
+                $news->saveAccess();
+            }
+            return $this->read();
+        }
+
 		public function save()
 		{
 			if (!empty($_POST))
 			{
 			    if ((new Access())->clear()) {
-
                     if ((new Access())->createAll($_POST['access'] ?? [])){
-
                         header('Location: /?model=access&action=update');
                         die();
                     }
@@ -24,12 +32,13 @@
 
 		public function create()
 		{
-            
-		}
+            include_once __DIR__ . "/../../views/access/add-form.php";
+        }
 
 		public function read()
 		{
-
+            $all = (new Access())->getAllRoles();
+            include_once __DIR__ . "/../../views/access/list.php";
 		}
 
 		public function update()
@@ -47,6 +56,8 @@
 		
 		public function delete()
 		{
-
+            $id = htmlspecialchars($_GET ['access']);
+            (new Access())->deleteByName($id);
+            return $this->read();
 		}
 	}

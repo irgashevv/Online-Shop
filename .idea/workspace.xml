@@ -20,12 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/views/access/add-form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/views/access/list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/controller/AccessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/AccessController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/DeliveryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/PaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/controller/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/controller/BasketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/controller/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controller/PermissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/PermissionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/category/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/category/form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/delivery/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/delivery/form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/product/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/product/form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/site/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/site/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/model/Access.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Access.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/model/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Permission.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,18 +65,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/views/access" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\views\access" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Command" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\src\Controller" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\common\src\Model" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\js" />
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Fixtures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\common\src\Service" />
@@ -244,10 +249,10 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="0" y="40" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.40.1366.728@0.40.1366.728" timestamp="1615118151408" />
-    <state x="390" y="139" width="585" height="620" key="find.popup" timestamp="1616332190134">
+    <state x="390" y="139" width="585" height="620" key="find.popup" timestamp="1616338356508">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="390" y="139" width="585" height="620" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1616332190134" />
+    <state x="390" y="139" width="585" height="620" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1616338356508" />
     <state x="339" y="182" key="run.anything.popup" timestamp="1616331772621">
       <screen x="0" y="40" width="1366" height="728" />
     </state>

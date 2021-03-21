@@ -159,6 +159,22 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/?model=access&action=create" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Добавить Роль
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/?model=access&action=read" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Список Ролей
+                        </p>
+                    </a>
+                </li>
             </ul>
         </li>
 
