@@ -40,7 +40,7 @@
                     <input type="file" value="<?=$one['picture'] ?? ''?>" name="picture" class="form-control">
                 </div>
 <?php if (!empty($one['picture'])) { ?>
-                <img src="../../../uploads/products<?php print $one['picture'];?>" style="width: 70px;">
+                <img src="http://localhost/shop/uploads/products/<?php print $one['picture'];?>" style="width: 70px;">
 <?php } ?>
                 </div>
                 <div class="form-group row">

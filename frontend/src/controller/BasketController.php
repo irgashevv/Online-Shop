@@ -45,7 +45,7 @@ class BasketController
 		foreach ($this->items as $item) {
 			if ($item['product_id'] == $product_id)
 			{
-				$this->basketService->updateBasketItem($this->basket['id'], $product_id, $qty);
+                $this->basketService->updateBasketItem($this->basket['id'],$product_id,$item['quantity']+$qty);
 				$this->redirectToBasket();
 				die();
 			}

@@ -42,7 +42,7 @@
 						<td>
 							<form action="/?model=basket&action=change" method="post">
 								<input type="hidden" name="product_id" value="<?=$item['product']['id']?>">
-								<input type="text" name="qty" value="<?=$item['quantity']?>">
+								<input type="number" name="qty" value="<?=$item['quantity']?>">
 								<input type="submit" value="change">
 							</form>
 						</td>
