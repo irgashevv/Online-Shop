@@ -11,7 +11,6 @@ $mysqlTypes =  [
 ];
 
 $reserveFields = ['id'];
-
 $objReflection = new ReflectionClass('Rating');
 $properties = $objReflection->getProperties();
 $queryTemplate = "create table %s (
@@ -22,7 +21,6 @@ $queryTemplate = "create table %s (
 
 $arFields = [];
 foreach ($properties as $property) {
-
     $comments = $property->getDocComment();
     $fieldType = AnnotationHelper::defineValueByAnnotation('var', $comments);
     $mysqlFieldType = $mysqlTypes[$fieldType] ?? 'varchar(255)';
@@ -33,14 +31,10 @@ foreach ($properties as $property) {
 }
 
 $query = sprintf($queryTemplate, strtolower($objReflection->getName()), implode(',', $arFields));
-
 $conn = DBConnector::getInstance()->connect();
-
 mysqli_query($conn, $query);
-
 if (!empty(mysqli_error($conn))) {
     print_r(mysqli_error($conn));
 }
-
 
 die("table Was created");
