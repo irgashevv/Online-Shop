@@ -8,39 +8,41 @@ class Product extends AbstractModel
     const NUMBER_PRODUCTS_PER_PAGE = 20;
 
 	public $id;
-	public $title;
-	public $picture;
-	public $preview;
+
+	/**
+     * @var string
+     * @valid{"type": "string", "maxlength": 32}
+     */
+    public $title;
+
+//    /**
+//     * @var string
+//     * @valid("type": "string", "regx": "((.jpg)|(.png))$")
+//     */
+    public $picture;
+
+//    /**
+//     * @var string
+//     * @valid {"maxLength": "255"}
+//     */
+    public $preview;
 	public $content;
-	public $price;
+
+    /**
+     * @var int
+     * @valid {"type": "int", "max": 30000, "min": 1}
+     */
+    public $price;
 	public $status;
 	public $created;
 	public $updated;
 
 	public function __construct(
 		$id = null,
-
-        /**
-         * @var string
-         * @valid("type": "string", "maxlength": 32)
-         */
-		$title = null,
-
-        /**
-         * @var string
-         * @valid("type": "string", "regx": "((.jpg)|(.png))$")
-         */
-		$picture = null,
-
+     	$title = null,
+    	$picture = null,
         $preview = null,
-
 		$content = null,
-
-        /**
-         * @var int
-         * @valid ("type": "int", "max": 30000, "min": 1)
-         */
-        
         $price = null,
 		$status = null,
 		$created = null,
