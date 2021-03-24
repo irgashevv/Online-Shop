@@ -21,10 +21,11 @@
     <section class="content">
         <div class="card-info">
             <?php
-            $errorMessage = MessageService::displayError();
+            $errorMessage =MessageService::displayError();
             if (!empty($errorMessage)) :?>
                 <div class="error"><?=$errorMessage?></div>
             <?php endif; ?>
+
             <form class="form-horizontal" action="/?model=product&action=save" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                     <input type="hidden" value="<?=$one['id'] ?? ''?>" name="id">

@@ -14,9 +14,9 @@
 			{
 				$filename = FileUploader::upload('products');
 				$now = date ('Y-m-d H:i:s', time());
-                $_POST['picture'] = $filename;
-                if (!ProductValidator::validate()) {
-                    return !empty($_POST['id']) ? $this->update($_POST['id']) : $this->create();
+
+				if (!ProductValidator::validate()) {
+				    return !empty($_POST['id']) ? $this->update($_POST['id']) : $this->create();
                 }
 
 				$product = new Product(
@@ -54,8 +54,8 @@
 
 			if (empty($one)) die('Product not found');
 			include_once __DIR__ . "/../../views/product/form.php";
-
 		}
+
 		public function delete()
 		{
 			$id = (int) $_GET ['id'];

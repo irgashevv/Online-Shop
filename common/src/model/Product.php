@@ -11,7 +11,7 @@ class Product extends AbstractModel
 
 	/**
      * @var string
-     * @valid{"type": "string", "maxlength": 32}
+     * @valid {"type": "string", "maxlength": 32}
      */
     public $title;
 
