@@ -14,6 +14,7 @@
 			{
 				$filename = FileUploader::upload('products');
 				$now = date ('Y-m-d H:i:s', time());
+				$_POST['picture'] = $filename;
 
 				if (!ProductValidator::validate()) {
 				    return !empty($_POST['id']) ? $this->update($_POST['id']) : $this->create();

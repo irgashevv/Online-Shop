@@ -15,16 +15,16 @@ class Product extends AbstractModel
      */
     public $title;
 
-//    /**
-//     * @var string
-//     * @valid("type": "string", "regx": "((.jpg)|(.png))$")
-//     */
+    /**
+     * @var string
+     * @valid {"regx": "((.jpg)|(.png))"}
+     */
     public $picture;
 
-//    /**
-//     * @var string
-//     * @valid {"maxLength": "255"}
-//     */
+    /**
+     * @var string
+     * @valid {"maxLength": "255"}
+     */
     public $preview;
 	public $content;
 
