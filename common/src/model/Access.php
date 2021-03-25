@@ -9,8 +9,8 @@ class Access
 
     public function __construct($access = null)
     {
-        $this->access = $access;
-        $this->conn = DBConnector::getInstance()->connect();
+        $this->access   = $access;
+        $this->conn     = DBConnector::getInstance()->connect();
     }
 
     public function saveAccess()

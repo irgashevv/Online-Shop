@@ -3,7 +3,7 @@
 class MessageService
 {
     const KEY_ERROR_MESSAGE = 'KEY_ERROR_MESSAGE';
-    const KEY_MESSAGE = 'KEY_MESSAGE';
+    const KEY_MESSAGE       = 'KEY_MESSAGE';
 
     public static function setError($message)
     {

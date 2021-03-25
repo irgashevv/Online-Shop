@@ -1,9 +1,9 @@
 <?php
 
-    include_once __DIR__ . "/interface/ControllerInterface.php";
-    include_once __DIR__ . "/../../../common/src/service/SecurityService.php";
-    include_once __DIR__ . "/../../../common/src/service/UserService.php";
-    include_once __DIR__ . "/../../../common/src/model/User.php";
+include_once __DIR__ . "/interface/ControllerInterface.php";
+include_once __DIR__ . "/../../../common/src/service/SecurityService.php";
+include_once __DIR__ . "/../../../common/src/service/UserService.php";
+include_once __DIR__ . "/../../../common/src/model/User.php";
 
 abstract class AbstractController implements ControllerInterface
 {
@@ -13,8 +13,7 @@ abstract class AbstractController implements ControllerInterface
      */
     public function __construct()
     {
-        if (!SecurityService::isAuthorized())
-        {
+        if (!SecurityService::isAuthorized()) {
             header("Location: /?model=site&action=login");
             die();
         }

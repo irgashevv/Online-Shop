@@ -9,7 +9,7 @@ class Permission
 
 	public function __construct($permission = null)
     {
-		$this->conn = DBConnector::getInstance()->connect();
+		$this->conn       = DBConnector::getInstance()->connect();
 		$this->permission = $permission;
 	}
 

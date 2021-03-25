@@ -16,7 +16,7 @@ class ValidationService
                     if (!$result) return false;
                     break;
                 case 'maxlength':
-                    $result =  self::maxLengthValidate($validateValue, $value);
+                    $result = self::maxLengthValidate($validateValue, $value);
                     if (!$result) return false;
                     break;
                 case 'max':
@@ -33,7 +33,6 @@ class ValidationService
                     break;
             }
         }
-
         return true;
     }
 

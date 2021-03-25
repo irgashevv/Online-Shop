@@ -2,58 +2,40 @@
 
 include_once __DIR__ . '/../model/Product.php';
 
-class ExportService
+class ImportService
 {
     private $connect;
+
     public function __construct()
     {
         $this->connect = DBConnector::getInstance()->connect();
     }
 
-    private function initExportFile()
+    private function initImportFile()
     {
-        $date = date('YmdHis', time());
-        $filename = 'products_' . $date . '.csv';
+        $filename = 'products.csv';
         $path = __DIR__ . '/../../../data/';
-
         return $path . $filename;
     }
 
-    private function getData()
+    public function import()
     {
-        $products = (new Product())->getAllForExport();
+        $fullFileName = $this->initImportFile();
 
-        $list = [];
-        foreach ($products as $product){
-            $list[] = [
-                $product['id'],
-                $product['title'],
-                $product['picture'],
-                $product['preview'],
-                $product['price'],
-                $product['status'],
-                $product['created'],
-                $product['updated'],
-            ];
+        $csv = array_map('str_getcsv', file($fullFileName));
 
+        foreach ($csv as $data) {
+            $product = new Product(
+                null, "book" . time(),
+                htmlspecialchars($data[2]),
+                htmlspecialchars($data[3]),
+                htmlspecialchars($data[4]),
+                intval($data[5]),
+                htmlspecialchars($data[6]),
+                htmlspecialchars($data[7]),
+                htmlspecialchars($data[8])
+            );
+            $product->save();
         }
-        return $list;
     }
-
-    public function export()
-    {
-        $fullFileName = $this->initExportFile();
-
-        $list = $this->getData();
-
-        $fp = fopen($fullFileName, 'w');
-
-        foreach ($list as $fields) {
-            fputcsv($fp, $fields);
-        }
-
-        fclose($fp);
-
-    }
-
 }

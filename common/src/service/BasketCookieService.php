@@ -16,8 +16,7 @@ class BasketCookieService extends BasketService
     public function getBasketProducts($basket_id)
     {
         $data = $_COOKIE['basket'] ?? [];
-        if (empty($data) && sizeof($data) == 0)
-        {
+        if (empty($data) && sizeof($data) == 0) {
             return $data;
         }
         return unserialize($data);
@@ -32,10 +31,8 @@ class BasketCookieService extends BasketService
     {
         $data = $this->getBasketProducts($basket_id);
 
-        foreach ($data as $key => $item)
-        {
-            if ($item['product_id'] === $product_id)
-            {
+        foreach ($data as $key => $item) {
+            if ($item['product_id'] === $product_id) {
                 $data[$key]['quantity'] = $qty;
             }
         }
@@ -66,7 +63,6 @@ class BasketCookieService extends BasketService
         //log()
         setcookie('basket', serialize($data), time() + self::TIME_EXPIRED);
     }
-
 
     public function clearBasket($basket_id)
     {

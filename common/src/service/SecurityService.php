@@ -21,7 +21,7 @@ class SecurityService
             // TODO Security
             throw new Exception('Incorrect Password', 400);
         }
-            return true;
+        return true;
     }
 
     public static function redirectToStartPage()

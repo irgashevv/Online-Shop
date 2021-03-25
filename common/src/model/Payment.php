@@ -22,18 +22,16 @@ class Payment
     private $conn;
 
     public function __construct(
-        $id = null,
-        $title = null,
-        $code = null,
-        $priority = null) {
-
-        $this->conn = DBConnector::getInstance()->connect();
-
-        $this->id = $id;
-        $this->title = $title;
-        $this->code = $code;
+        $id         = null,
+        $title      = null,
+        $code       = null,
+        $priority   = null
+    ){
+        $this->conn     = DBConnector::getInstance()->connect();
+        $this->id       = $id;
+        $this->title    = $title;
+        $this->code     = $code;
         $this->priority = $priority;
-
     }
 
     /**

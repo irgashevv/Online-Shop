@@ -87,29 +87,29 @@ class Order
      * @param string $comment
      */
 	public function __construct(
-	    $id = null,
-        $user_id = null,
-        $payment_id = null,
-        $delivery_id = null,
-        $total = null,
-        $comment = null,
-        $name = null,
-        $phone = null,
-        $email = null,
-        $status = null,
-        $updated = null)
-	{
-		$this->conn = DBConnector::getInstance()->connect();
-        $this->id = $id;
-        $this->user_id = $user_id;
-        $this->payment_id = $payment_id;
-        $this->delivery_id = $delivery_id;
-        $this->total = $total;
-        $this->status = $status;
-        $this->comment = $comment;
-        $this->name = $name;
-        $this->phone = $phone;
-        $this->email = $email;
+	    $id             = null,
+        $user_id        = null,
+        $payment_id     = null,
+        $delivery_id    = null,
+        $total          = null,
+        $comment        = null,
+        $name           = null,
+        $phone          = null,
+        $email          = null,
+        $status         = null,
+        $updated        = null
+    ){
+		$this->conn         = DBConnector::getInstance()->connect();
+        $this->id           = $id;
+        $this->user_id      = $user_id;
+        $this->payment_id   = $payment_id;
+        $this->delivery_id  = $delivery_id;
+        $this->total        = $total;
+        $this->status       = $status;
+        $this->comment      = $comment;
+        $this->name         = $name;
+        $this->phone        = $phone;
+        $this->email        = $email;
 
         if ($this->id == null)
         {

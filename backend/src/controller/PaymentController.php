@@ -27,17 +27,17 @@ class PaymentController extends AbstractController
         include_once __DIR__ . "/../../views/payment/form.php";
 
     }
+
     public function delete()
     {
-        $id = (int) $_GET ['id'];
+        $id = (int)$_GET ['id'];
         (new Payment())->deleteById($id);
         return $this->read();
     }
 
     public function save()
     {
-        if (!empty($_POST))
-        {
+        if (!empty($_POST)) {
             $delivery = new Payment(
                 (int)$_POST['id'],
                 htmlspecialchars($_POST['title']),

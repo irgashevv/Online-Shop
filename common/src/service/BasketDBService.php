@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include_once __DIR__ . "/../model/Basket.php";
 include_once __DIR__ . "/../model/BasketItem.php";
@@ -26,12 +26,12 @@ class BasketDBService extends BasketService
         return $basket->getFromDB();
     }
 
-    public function	updateBasketItem($basket_id, $product_id, $qty)
+    public function updateBasketItem($basket_id, $product_id, $qty)
     {
         (new BasketItem($basket_id, $product_id, $qty))->update();
     }
 
-    public function	deleteBasketItem($basket_id, $product_id)
+    public function deleteBasketItem($basket_id, $product_id)
     {
         (new BasketItem())->deleteProductByBasketId($product_id, $basket_id);
     }
@@ -74,9 +74,9 @@ class BasketDBService extends BasketService
     {
         $user = UserService::getCurrentUser();
 
-        if (!isset($user['login'])){
+        if (!isset($user['login'])) {
             return [];
-            throw new Exception('No Permission',403 );
+            throw new Exception('No Permission', 403);
         }
 
         $basket = self::getBasketByUserId($user['id']);

@@ -10,14 +10,14 @@ class OrderItem
 	private $conn;
 
 	public function __construct(
-		$order_id = null,
+		$order_id   = null,
 		$product_id = null, 
-		$quantity = null) 
-	{
-		$this->conn = DBConnector::getInstance()->connect();
-		$this->order_id = $order_id;
-		$this->product_id = $product_id;
-		$this->quantity = $quantity;
+		$quantity   = null
+    ){
+		$this->conn         = DBConnector::getInstance()->connect();
+		$this->order_id     = $order_id;
+		$this->product_id   = $product_id;
+		$this->quantity     = $quantity;
 	}
 
     /**
@@ -27,7 +27,6 @@ class OrderItem
     public function setConn($conn)
     {
         $this->conn = $conn;
-
         return $this;
     }
 

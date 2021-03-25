@@ -8,11 +8,9 @@ class AnnotationHelper
             if (strpos($line, '@' . $annotationName) !== false) {
                 $param = trim(substr($line, strpos($line, '@' . $annotationName)
                     + strlen('@' . $annotationName)));
-
                 return $param;
             }
         }
         return 'str';
     }
-
 }

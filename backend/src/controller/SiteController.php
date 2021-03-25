@@ -3,13 +3,13 @@
 include_once __DIR__ . "/../../../common/src/model/Product.php";
 include_once __DIR__ . "/../../../common/src/service/UserService.php";
 
-class SiteController 
+class SiteController
 {
-	public function index()
-	{
+    public function index()
+    {
         header("Location: /?model=product&action=read");
         die();
-	}
+    }
 
     public function login()
     {

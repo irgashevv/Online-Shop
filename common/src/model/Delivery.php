@@ -23,18 +23,16 @@ class Delivery
     private $conn;
 
     public function __construct(
-        $id = null,
-        $title = null,
-        $code = null,
-        $priority = null) {
-
-        $this->conn = DBConnector::getInstance()->connect();
-
-        $this->id = $id;
-        $this->title = $title;
-        $this->code = $code;
+        $id         = null,
+        $title      = null,
+        $code       = null,
+        $priority   = null
+    ) {
+        $this->conn     = DBConnector::getInstance()->connect();
+        $this->id       = $id;
+        $this->title    = $title;
+        $this->code     = $code;
         $this->priority = $priority;
-
     }
 
     /**
@@ -103,15 +101,13 @@ class Delivery
 
     public function save()
     {
-        if ($this->id > 0)
-        {
+        if ($this->id > 0) {
             $query = "UPDATE delivery set 
 		    title='" . $this->title . "',
 		    code='" . $this->code . "',
 		    priority='" . $this->priority . "' where 
 		    id=" . $this->id . " limit 1";
-        } else
-        {
+        } else {
             $query = "INSERT INTO delivery VALUES (
                 null,
 		        '" . $this->title . "',
@@ -123,7 +119,7 @@ class Delivery
 
     public function deleteById($id)
     {
-        mysqli_query ($this->conn, "delete from delivery where id = $id");
+        mysqli_query($this->conn, "delete from delivery where id = $id");
     }
 
     public function getById($id)

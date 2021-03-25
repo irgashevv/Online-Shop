@@ -37,14 +37,14 @@ class OrderServiceTest extends AbstractTest
             ->getProductsAndOrderByOrderId(1);
 
         if (!method_exists($orderService, 'calcTotal')) {
-            print "Error: calcTotal() is not exist" . PHP_EOL ;
+            print "Error: calcTotal() is not exist" . PHP_EOL;
             die('Test Was Crashed');
         }
 
         $total = $orderService->calcTotal($quantityAndProducts);
 
         if (935 !== $total) {
-            print "Error: calcTotal() is not correct" . PHP_EOL ;
+            print "Error: calcTotal() is not correct" . PHP_EOL;
             die('Test Was Crashed');
         }
 

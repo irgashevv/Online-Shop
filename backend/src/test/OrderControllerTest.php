@@ -16,7 +16,8 @@ class OrderControllerTest extends AbstractTest
             $this->dropTableByName('products');
             $this->dropTableByName('orders');
             $this->dropTableByName('order_item');
-        } catch (Exception $e) {}
+        } catch (Exception $e) {
+        }
 
         $this->createTableByName('basket');
         $this->createTableByName('basket_item');
@@ -32,12 +33,12 @@ class OrderControllerTest extends AbstractTest
         (new FixtureBasketItem($this->conn))->run();
 
         $_POST = [
-            'name' => 'Ибра',
-            'phone' => '123-123',
-            'email' => 'irg@mail.ru',
-            'delivery' => '2',
-            'payment' => '2',
-            'comment' => 'Comment'
+            'name'      => 'Ибра',
+            'phone'     => '123-123',
+            'email'     => 'irg@mail.ru',
+            'delivery'  => '2',
+            'payment'   => '2',
+            'comment'   => 'Comment'
         ];
 
         $orderController = new OrderController($this->conn->connect());
@@ -51,10 +52,10 @@ class OrderControllerTest extends AbstractTest
             die('Test Was Crashed');
         }
 
-        $order = reset ($orders);
+        $order = reset($orders);
         foreach (['email' => $_POST['email'], 'phone' => $_POST['phone']] as $key => $value) {
             if ($order[$key] !== $value) {
-                print "Error: wrong value". $key . PHP_EOL;
+                print "Error: wrong value" . $key . PHP_EOL;
                 die('Test Was Crashed');
             }
         }

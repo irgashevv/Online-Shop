@@ -19,7 +19,7 @@ abstract class AbstractTest
     public function copyTableByName($name)
     {
         mysqli_query($this->conn->connect(), "insert into " . self::DB_TEST_NAME . "." . $name
-        . " select * from " . self::DB__PRODUCT_NAME . "." . $name);
+            . " select * from " . self::DB__PRODUCT_NAME . "." . $name);
     }
 
     public function createTableByName($name)

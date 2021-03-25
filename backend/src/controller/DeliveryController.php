@@ -1,5 +1,4 @@
 <?php
-
 include_once __DIR__ . "/AbstractController.php";
 include_once __DIR__ . "/../../../common/src/model/Delivery.php";
 
@@ -25,21 +24,19 @@ class DeliveryController extends AbstractController
 
         if (empty($one)) die('Product not found');
         include_once __DIR__ . "/../../views/delivery/form.php";
-
     }
 
     public function delete()
     {
         $id = (int)$_GET['id'];
         if (empty($id)) die ('Undefined ID');
-        (new Product())->deleteById($id);
+        (new Delivery())->deleteById($id);
         return $this->read();
     }
 
     public function save()
     {
-        if (!empty($_POST))
-        {
+        if (!empty($_POST)) {
             $delivery = new Delivery(
                 (int)$_POST['id'],
                 htmlspecialchars($_POST['title']),
