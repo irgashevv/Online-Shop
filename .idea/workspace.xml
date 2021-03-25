@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/src/service/ExportService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/ValidationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/ValidationService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,22 +56,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/views/access" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/command" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\common\src\Service" />
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\command" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\views\access" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\backend\src\Command" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\src\Controller" />
       <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\common\src\Model" />
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\common\src\Service" />
-      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\frontend\css" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.CommentController.php">
@@ -151,7 +149,7 @@
       <workItem from="1616479344299" duration="380000" />
       <workItem from="1616494955958" duration="11858000" />
       <workItem from="1616568216435" duration="155000" />
-      <workItem from="1616568391582" duration="10103000" />
+      <workItem from="1616568391582" duration="14439000" />
     </task>
     <servers />
   </component>
@@ -235,14 +233,18 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.40.1366.728@0.40.1366.728" timestamp="1615118191651" />
-    <state x="310" y="126" key="NewPhpClassDialog" timestamp="1616223928400">
+    <state x="310" y="126" key="NewPhpClassDialog" timestamp="1616589010590">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="310" y="126" key="NewPhpClassDialog/0.40.1366.728@0.40.1366.728" timestamp="1616223928400" />
+    <state x="310" y="126" key="NewPhpClassDialog/0.40.1366.728@0.40.1366.728" timestamp="1616589010590" />
     <state x="518" y="327" key="NewPhpFileDialog" timestamp="1616058206399">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="518" y="327" key="NewPhpFileDialog/0.40.1366.728@0.40.1366.728" timestamp="1616058206399" />
+    <state x="184" y="48" key="SettingsEditor" timestamp="1616589320433">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="184" y="48" key="SettingsEditor/0.40.1366.728@0.40.1366.728" timestamp="1616589320433" />
     <state x="0" y="40" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1615118151408">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
@@ -255,9 +257,9 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="339" y="182" key="run.anything.popup/0.40.1366.728@0.40.1366.728" timestamp="1616331772621" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1616219516487">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1616651437669">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.40.1366.728@0.40.1366.728" timestamp="1616219516487" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.40.1366.728@0.40.1366.728" timestamp="1616651437669" />
   </component>
 </project>
