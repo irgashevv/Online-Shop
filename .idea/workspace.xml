@@ -21,84 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/AbstractController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/AbstractController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/AccessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/AccessController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/DeliveryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/Interface/ControllerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/Interface/ControllerInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/PaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/PermissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/PermissionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/ShopController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controller/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controller/SiteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/fixtures/Fixture01.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/fixtures/Fixture01.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/AbstractTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/AbstractTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/OrderControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/OrderControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/OrderServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/OrderServiceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/access/add-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/access/add-form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/access/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/access/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/access/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/access/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/category/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/category/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/category/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/category/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/delivery/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/delivery/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/delivery/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/delivery/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/exceptions/400.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/exceptions/400.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/news/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/news/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/orders/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/orders/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/orders/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/orders/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/payment/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/payment/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/payment/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/payment/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/permission/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/permission/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/permission/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/permission/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/product/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/product/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/product/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/product/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/shop/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/shop/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/site/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Access.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Access.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/BasketItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/BasketItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Comments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Delivery.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Delivery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/OrderItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/OrderItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/Shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/Shop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/AnnotationHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/AnnotationHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/BasketCookieService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/BasketCookieService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/BasketDBService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/BasketDBService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/BasketService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/BasketService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/BasketSessionService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/BasketSessionService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/DBConnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/DBConnector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/ExportService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/ExportService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/FileUploader.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/FileUploader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/ImportService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/ImportService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/MessageService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/MessageService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/OrderService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/OrderService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/PagerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/PagerService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/ProductService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/ProductValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/ProductValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/SecurityService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/SecurityService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/service/ValidationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/service/ValidationService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/products_20210325085503.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/products_20210325091433.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/api.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/api.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/api_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/api_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/controller/api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/controller/api/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/basket/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/basket/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/exceptions/400.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/exceptions/400.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/order/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/order/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/product/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/product/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/register/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/register/form.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +153,8 @@
       <workItem from="1616479344299" duration="380000" />
       <workItem from="1616494955958" duration="11858000" />
       <workItem from="1616568216435" duration="155000" />
-      <workItem from="1616568391582" duration="34525000" />
+      <workItem from="1616568391582" duration="35154000" />
+      <workItem from="1616744865042" duration="15174000" />
     </task>
     <servers />
   </component>
@@ -327,10 +254,10 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="0" y="40" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.40.1366.728@0.40.1366.728" timestamp="1615118151408" />
-    <state x="390" y="139" width="585" height="620" key="find.popup" timestamp="1616695280318">
+    <state x="390" y="139" width="585" height="620" key="find.popup" timestamp="1616750099077">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="390" y="139" width="585" height="620" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1616695280318" />
+    <state x="390" y="139" width="585" height="620" key="find.popup/0.40.1366.728@0.40.1366.728" timestamp="1616750099077" />
     <state x="339" y="182" key="run.anything.popup" timestamp="1616331772621">
       <screen x="0" y="40" width="1366" height="728" />
     </state>

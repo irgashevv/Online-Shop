@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div style="width: 600px; margin: 20px auto;">
+    <button id="button_add_product" class="btn btn-success">Add Product</button>
+<div><br><br></div>
+
+<form id="product_form" class="form-horizontal create-form"
+       method="post" enctype="multipart/form-data" style="display: none">
+    <h2>Создание/редактировение</h2>
+    <div class="card-body">
+        <div>
+            <input type="hidden" value="" name="id">
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Заголовок</label>
+            <div class="col-sm-10">
+                <input type="text" value="" name="title" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Фотография</label>
+            <div class="col-sm-10">
+                <input type="file" value="" name="picture" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Пред-просмотр</label>
+            <div class="col-sm-10">
+                <input type="text" value="" name="preview" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Содержание</label>
+            <div class="col-sm-10">
+                <textarea rows="7" name="content" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Цена</label>
+            <div class="col-sm-10">
+                <input type="text" value="" name="price" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Статус</label>
+            <div class="col-sm-10">
+                <input type="text" value="" name="status" class="form-control">
+            </div>
+        </div>
+        <div>
+            <input type="submit" class="btn btn-info" value="Сохранить" data-toggle="modal" data-target="#myModal">
+        </div>
+    </div>
+</form>
+</div>
+    <div id="products">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Picture</th>
+            <th>title</th>
+            <th>price</th>
+            <th>created</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+<div id="myModal" class="modal" tabindex="1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Product Was Saved Success!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function setProductDataForm(id, title, preview, status, price, content)
+    {
+        $("#product_form input[name='id']").val(id || '');
+        $("#product_form input[name='title']").val(title || '');
+        $("#product_form input[name='preview']").val(preview || '');
+        $("#product_form input[name='status']").val(parseInt(status || ''));
+        $("#product_form input[name='price']").val(parseInt(price || ''));
+        $("#product_form textarea[name='content']").val(content || '');
+    }
+
+    function displayForm()
+    {
+        $("#product_form").show();
+        setProductDataForm();
+    }
+
+    $("#button_add_product").click(function () {
+        displayForm();
+    })
+
+    $.ajax({
+        type: 'GET',
+        url: 'http://shop.loc/?module=api&model=product&action=index',
+        dataType: 'json',
+        success: function (response) {
+            console.log(response);
+            for (let index in response) {
+                $("#products table tbody").append($(`<tr>
+                        <td>${response[index].id}</td>
+                        <td><img src="http://localhost/shop/uploads/products/">${response[index].picture}</td>
+                        <td>${response[index].title}</td>
+                        <td>${response[index].price}</td>
+                        <td>${response[index].created}</td>
+                        <td>
+                        <a href="" class="btn btn-danger product_delete" data-id="${response[index].id}">Delete</a>
+                        <a href="" class="btn btn-warning product_edit" data-id="${response[index].id}">Edit</a>
+</td>
+                    </tr>`));
+            }
+        },
+        error: function (data) {
+            console.error(data)
+        }
+    });
+
+    $('#products table').on('click', '.product_edit', function () {
+
+        const _self = $(this);
+        const id = parseInt(_self.data('id'));
+
+        $.ajax({
+            type: 'GET',
+            url: 'http://shop.loc/?module=api&model=product&action=view&id=' + id,
+            dataType: 'json',
+            success: function (response) {
+                console.log(response);
+                setProductDataForm(parseInt(response.id), response.title, response.preview,
+                    parseInt(response.status), parseInt(response.price) ,response.content)
+                $("#product_form").show();
+            },
+
+            error: function (data) {
+                console.error(data)
+            }
+        });
+        return false;
+    });
+
+
+    $('#products table').on('click', '.product_delete', function () {
+
+        const _self = $(this);
+        let data = {
+            id: parseInt(_self.data('id')),
+        };
+        $.ajax({
+            type: 'POST',
+            url: 'http://shop.loc/?module=api&model=product&action=delete',
+            data: data,
+            dataType: 'json',
+            success: function (response) {
+                console.log(response);
+                _self.parent().parent().remove();
+            },
+            error: function (data) {
+                console.error(data)
+            }
+        });
+
+        return false;
+    })
+
+    $('form.create-form').submit(function () {
+        let data = {
+            id: parseInt($('input[name=id]').val()),
+            title: $('input[name=title]').val(),
+            preview: $('input[name=preview]').val(),
+            content: $('textarea[name=content]').val(),
+            picture: $('input[name=picture]').val(),
+            price: $('input[name=price]').val(),
+            status: $('input[name=status]').val(),
+        };
+
+        const operation = data.id > 0 ? 'update' : 'create';
+
+        $.ajax({
+            type: 'POST',
+            url: 'http://shop.loc/?module=api&model=product&action=' + operation,
+            data: data,
+            dataType: 'json',
+            success: function (response) {
+                console.log(response);
+                setProductDataForm();
+            },
+            error: function (data) {
+                console.error(data)
+            }
+        });
+        return false;
+    })
+</script>
+</body>
+</html>
