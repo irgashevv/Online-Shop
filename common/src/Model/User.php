@@ -5,6 +5,7 @@ include_once __DIR__ . "/../Service/UserService.php";
 
 class User
 {
+
     const ROLE_USER_VALUE = 'ROLE_USER';
 
     /**
